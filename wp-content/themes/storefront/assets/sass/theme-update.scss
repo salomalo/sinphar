@@ -1,0 +1,34 @@
+$blue: #11337d;
+$green: #128043;
+
+// header
+.main-navigation ul li a{
+	color: $blue;
+}
+
+@media (min-width: 768px){
+	.main-navigation ul.menu>li>a,
+	.main-navigation ul.nav-menu>li>a,
+	.site-header-cart .cart-contents{
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+}
+
+.site-header{
+	@media (min-width: 768px){
+		padding-top: 1.2em;
+	}
+}
+.site-branding{
+	padding-bottom: 1.5em;
+}
+
+.storefront-primary-navigation{
+	margin-top: 1em;
+	@media (min-width: 768px){
+		border-bottom: 3px solid $blue;
+		box-shadow: 0 -5px 12px rgba(0,0,0,0.1);
+	}
+}
+

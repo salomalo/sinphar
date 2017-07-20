@@ -16,6 +16,9 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<!-- theme-update.css -->
+<link rel="stylesheet" href="<?php echo get_template_directory_uri().'/theme-update.css'; ?>">
 </head>
 
 <body <?php body_class(); ?>>

@@ -1,5 +1,13 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
 $blue: #11337d;
 $green: #128043;
+
+// body
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
 
 // header
 .main-navigation ul li a{
@@ -31,4 +39,6 @@ $green: #128043;
 		box-shadow: 0 -5px 12px rgba(0,0,0,0.1);
 	}
 }
+
+// footer
 

@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
-
+$white: #fff;
 $blue: #11337d;
 $green: #128043;
+$gray: #3f3b3b;
 
 // body
 body{
@@ -13,6 +14,9 @@ body{
 .main-navigation ul li a{
 	color: $blue;
 }
+.site-header ul.menu li.current-menu-item > a{
+	color: $green;
+}
 
 @media (min-width: 768px){
 	.main-navigation ul.menu>li>a,
@@ -20,6 +24,15 @@ body{
 	.site-header-cart .cart-contents{
 		padding-top: 1em;
 		padding-bottom: 1em;
+	}
+	.woocommerce-active .site-header .main-navigation{
+		width: 100%;
+		float: none;
+	}
+	// dropdown
+	.main-navigation ul.menu ul.sub-menu{
+		background: $white;
+		box-shadow: 0 0 5px rgba(0,0,0,0.4);
 	}
 }
 
@@ -41,4 +54,92 @@ body{
 }
 
 // footer
+footer{
+	&.site-footer{
+		background: $white;
+		border-top: 3px solid $green;
+		padding: 0;
+		&:before{
+			display: block;
+			content: '';
+			width: 100%;
+			height: 3px;
+			background: $blue;
+		}
+		a, p{
+			color: $gray;
+		}
+		a:hover{
+			color: $green;
+		}
+	}
+	.footer-widgets{
+		border-bottom: none;
+	}
+	.site-info{
+		padding: 0;
+	}
+	.textwidget{
+		a{
+			display: inline-block;
+		}
+	}
+	.footer-widgets.col-4 .block{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-widget-4{
+		display: none;
+	}
+	@media (min-width: 768px) {
+		.footer-widgets.col-4 .block{
+			width: 45%;
+			text-align: left;
+		}
+		.footer-widget-4{
+			display: block;
+		}
+	}
+	.norm_row{
+		width: auto!important;
+		position: relative!important;
+		float: right;
+	}
+}
 
+
+// layout
+.woocommerce-breadcrumb,
+.page .entry-header h1.entry-title{
+	display: none;
+}
+@media (min-width: 768px){
+	.site-content{
+		.col-full{
+			max-width: none;
+			padding: 0;
+		}
+	}
+}
+
+// title
+.block-center{
+	text-align: center;
+	margin: 0 auto;
+}
+.page-main-title{
+	border-top: 3px solid $green;
+	border-bottom: 3px solid $blue;
+	color: $blue;
+	display: inline-block;
+	text-align: center;
+	padding: 15px 0;
+	letter-spacing: 10px;
+	font-size: 40px;
+	font-weight: 400;
+}
+.page-main-subtitle{
+	font-size: 15px;
+	color: $blue;
+	letter-spacing: 14px;
+}

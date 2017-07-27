@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.main-navigation ul li a {
+  color: #11337d;
+}
+
+.site-header ul.menu li.current-menu-item > a {
+  color: #128043;
+}
+
+@media (min-width: 768px) {
+  .main-navigation ul.menu > li > a,
+  .main-navigation ul.nav-menu > li > a,
+  .site-header-cart .cart-contents {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .woocommerce-active .site-header .main-navigation {
+    width: 100%;
+    float: none;
+  }
+  .main-navigation ul.menu ul.sub-menu {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    padding-top: 1.2em;
+  }
+}
+
+.site-branding {
+  padding-bottom: 1.5em;
+}
+
+.storefront-primary-navigation {
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .storefront-primary-navigation {
+    border-bottom: 3px solid #11337d;
+    box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+footer.site-footer {
+  background: #fff;
+  border-top: 3px solid #128043;
+  padding: 0;
+}
+
+footer.site-footer:before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #11337d;
+}
+
+footer.site-footer a, footer.site-footer p {
+  color: #3f3b3b;
+}
+
+footer.site-footer a:hover {
+  color: #128043;
+}
+
+footer .footer-widgets {
+  border-bottom: none;
+}
+
+footer .site-info {
+  padding: 0;
+}
+
+footer .textwidget a {
+  display: inline-block;
+}
+
+footer .footer-widgets.col-4 .block {
+  width: 100%;
+  text-align: center;
+}
+
+footer .footer-widget-4 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  footer .footer-widgets.col-4 .block {
+    width: 45%;
+    text-align: left;
+  }
+  footer .footer-widget-4 {
+    display: block;
+  }
+}
+
+footer .norm_row {
+  width: auto !important;
+  position: relative !important;
+  float: right;
+}
+
+.woocommerce-breadcrumb,
+.page .entry-header h1.entry-title {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-content .col-full {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.block-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-main-title {
+  border-top: 3px solid #128043;
+  border-bottom: 3px solid #11337d;
+  color: #11337d;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  letter-spacing: 10px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.page-main-subtitle {
+  font-size: 15px;
+  color: #11337d;
+  letter-spacing: 14px;
+}
+
+/*# sourceMappingURL=theme-update.css.map */

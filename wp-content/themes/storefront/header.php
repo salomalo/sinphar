@@ -30,9 +30,11 @@
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
-			<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
-			<span> | </span>	
-			<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">註冊</a>
+			<div class="user-btns-group">
+				<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
+				<span> | </span>	
+				<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">註冊</a>
+			</div>
 			<?php
 			/**
 			 * Functions hooked into storefront_header action

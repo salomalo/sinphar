@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 34 33.333 34 33.333 0.667 0 0.667"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.000000, -1.000000)">
+            <g id="Group-3" transform="translate(0.000000, 0.333000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M33.333,17.3335 C33.333,26.5385 25.872,34.0005 16.667,34.0005 C7.461,34.0005 0,26.5385 0,17.3335 C0,8.1285 7.461,0.6665 16.667,0.6665 C25.872,0.6665 33.333,8.1285 33.333,17.3335" id="Fill-1" fill="#072F80" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M11.7324,14.6006 L21.4024,14.6006" id="Stroke-4" stroke="#FFFFFF" stroke-width="0.943"></path>
+            <path d="M11.7324,17.6665 L21.4024,17.6665" id="Stroke-6" stroke="#FFFFFF" stroke-width="0.943"></path>
+            <path d="M11.7324,20.7324 L21.4024,20.7324" id="Stroke-8" stroke="#FFFFFF" stroke-width="0.943"></path>
+        </g>
+    </g>
+</svg>

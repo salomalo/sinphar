@@ -25,15 +25,32 @@
 
 <?php do_action( 'storefront_before_site' ); ?>
 
+<script>
+	// mobile menu
+	jQuery(document).ready(function($){
+		$('.menu-item-has-children').click(function(){
+			$(this).find('.sub-menu').slideToggle('slow');
+		});
+	});
+</script>
+
 <div id="page" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
 			<div class="user-btns-group">
-				<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
-				<span> | </span>	
-				<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">註冊</a>
+				<?php 
+					if ( is_user_logged_in() ) {
+				?>
+					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">我的帳戶</a>
+					<span> | </span>
+					<a href="<?php echo wp_logout_url(); ?>">登出</a>
+				<?php } else{ ?>
+					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
+					<span> | </span>	
+					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">註冊</a>
+				<?php } ?>
 			</div>
 			<?php
 			/**

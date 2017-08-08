@@ -2432,7 +2432,7 @@ if ( !class_exists('WordpressPopularPosts') ) {
 			// date
 			if ($instance['stats_tag']['date']['active']) {
 				$date = $this->_get_date($p, $instance);
-				$stats[] = '<span class="wpp-date">' . sprintf(__('posted on %s', $this->plugin_slug), $date) . '</span>';
+				$stats[] = '<span class="wpp-date">' . sprintf(__('%s', $this->plugin_slug), $date) . '</span>';
 			}
 
 			// category

@@ -6,6 +6,8 @@ $green: #128043;
 $gray: #3f3b3b;
 $gray-text: #595757;
 $gray-border: #b5b6b6;
+$gray-light: #d4d4d5;
+$gray-bg: #f0f0f0;
 
 // body
 body{
@@ -17,6 +19,7 @@ img{
 a{
 	color: $blue;
 	transition: .3s;
+	text-decoration: none;
 	&:hover{
 		color: $green;
 	}
@@ -688,96 +691,98 @@ body:not(.page-template-template-fullwidth) .col-full{
 
 
 // sidebar
-.widget-area{
-	.widget-title{
-		border: none;
-		color: $blue;
-		font-size: 24px;
-		font-weight: 400;
-		letter-spacing: 5px;
-		padding: 0 0 .3em;
-	}
-	.widget_product_categories ul{
-		li{
-			padding-left: 0;
-			&:before{
-				display: none;
-			}
+body.woocommerce-page{
+	.widget-area{
+		.widget-title{
+			border: none;
+			color: $blue;
+			font-size: 24px;
+			font-weight: 400;
+			letter-spacing: 5px;
+			padding: 0 0 .3em;
 		}
-		.children{
-			margin-left: 4%;
+		.widget_product_categories ul{
 			li{
+				padding-left: 0;
 				&:before{
-					display: inline-block;
-					content: '-';
-					font-family: inherit;
-    			margin: 0;
-    			color: $gray;
-    			background: $white;
-    			position: relative;
-    			z-index: 1;
-    			opacity: 1;
+					display: none;
+				}
+			}
+			.children{
+				margin-left: 4%;
+				li{
+					&:before{
+						display: inline-block;
+						content: '-';
+						font-family: inherit;
+	    			margin: 0;
+	    			color: $gray;
+	    			background: $white;
+	    			position: relative;
+	    			z-index: 1;
+	    			opacity: 1;
+					}
 				}
 			}
 		}
-	}
-	.widget{
-		a:not(.button), a{
-			color: $gray;
-			text-decoration: none;
-			background: $white;
-			position: relative;
-			z-index: 1;
-			padding-right: 5px;
-			&:hover{
-				color: $green;
-			}
-		}
-		li{
-			&:not(.cat-parent){
-				position: relative;
-				&:after{
-					display: inline-block;
-					content: '';
-					border-bottom: 1px solid $gray;
-					width: 100%;
-					position: absolute;
-					bottom: 1px;
-					left: 0;
-					z-index: -1;
-				}
-				> ul.children{
-					border-top: 1px solid $gray;
-				}
-			}
-
-			&.cat-parent{
-				> ul.children{
-					border-top: 1px solid $gray;
-					margin-top: -2px;
-					padding-top: 1em;
-				}
-			}
-			&.current-cat{
-				> ul.children{
-					border-top: 1px solid $green;
-				}
-				&:after{
-					border-bottom: 1px solid $green;
-				}
-			}
-
-			.count{
+		.widget{
+			a:not(.button), a{
+				color: $gray;
+				text-decoration: none;
 				background: $white;
-				padding-left: 3px;
-			}
-
-			&.current-cat{
-				> a, > .count{
+				position: relative;
+				z-index: 1;
+				padding-right: 5px;
+				&:hover{
 					color: $green;
 				}
-				&:before{
-					border-color: $green;
+			}
+			li{
+				&:not(.cat-parent){
+					position: relative;
+					&:after{
+						display: inline-block;
+						content: '';
+						border-bottom: 1px solid $gray;
+						width: 100%;
+						position: absolute;
+						bottom: 1px;
+						left: 0;
+						z-index: -1;
+					}
+					> ul.children{
+						border-top: 1px solid $gray;
+					}
+				}
+
+				&.cat-parent{
+					> ul.children{
+						border-top: 1px solid $gray;
+						margin-top: -2px;
+						padding-top: 1em;
+					}
+				}
+				&.current-cat{
+					> ul.children{
+						border-top: 1px solid $green;
+					}
+					&:after{
+						border-bottom: 1px solid $green;
+					}
+				}
+
+				.count{
+					background: $white;
+					padding-left: 3px;
+				}
+
+				&.current-cat{
+					> a, > .count{
+						color: $green;
+					}
+					&:before{
+						border-color: $green;
+					}
 				}
 			}
 		}
@@ -889,7 +894,7 @@ ul.products{
 			}
 			&:hover{
 				transition: .3s;
-				a:after{
+				a.woocommerce-LoopProduct-link:after{
 					display: block;
 					content: '';
 					width: 100%;
@@ -1003,5 +1008,278 @@ ul.products{
 	&:hover{
 		color: $white;
 		opacity: 0.8;
+	}
+}
+
+// 健康新知
+.left-sidebar{
+	.widget-area .widget a:not(.button){
+		text-decoration: none;
+	}
+	.widget_recent_entries ul li,
+	.widget_pages ul li,
+	.widget_categories ul li{
+		padding: 0;
+		&:before{
+			display: none;
+		}
+	}
+	#page{
+		&.healthy{
+			@media (min-width: 768px) {
+				.widget-area{
+					float: right;
+					margin-left: 4.347826087%;
+					margin-right: 0;
+				}
+				.content-area{
+					float: left;
+				}
+			}
+
+			.widget-title{
+				color: $blue;
+				font-size: 16px;
+				letter-spacing: 3px;
+				border: none;
+				font-weight: 400;
+				padding-bottom: 5px;
+				&:after{
+					display: block;
+					content: '';
+					width: 25px;
+					height: 3px;
+					background: $gray-light;
+					margin-top: 3px;
+				}
+			}
+
+			.post-date, .wpp-date{
+				color: $blue;
+				display: block;
+				float: left;
+				width: 40px;
+				height: 40px;
+				font-size: 15px;
+				border: 1px solid $blue;
+				text-align: center;
+				margin-right: 5px;
+				line-height: 1.2;
+			}
+			
+			.popular-posts, .widget_recent_entries{
+				li{
+					text-align: left;
+				}
+				a{
+					color: $blue;
+					margin-top: 5px;
+					display: block;
+					float: right;
+					margin-top: 10px;
+					width: calc(100% - 47px);;
+					@media (min-width: 768px) {
+						height: 18px;
+						overflow: hidden;
+					}
+				}
+			}
+
+			.widget-area ul li{
+				clear: both;
+				overflow: hidden;
+				margin-bottom: .6em;
+				padding-bottom: .6em;
+				border-bottom: 1px solid $gray-border;
+			}
+
+			.widget_categories{
+				a{
+					font-size: 16px;
+					color: $blue;
+					padding: 6px 0;
+					display: inline-block;
+				}
+				.cat-item{
+					color: $blue;
+				}
+			}
+
+		}
+	}
+}
+
+
+.vc_gitem-zone-a .vc_gitem-row-position-top,
+.vc_gitem-zone-a .vc_gitem-row-position-middle,
+.vc_gitem-zone-b .vc_gitem-row-position-middle,
+.vc_gitem-zone-a .vc_gitem-row-position-bottom,
+.vc_gitem-zone-b .vc_gitem-row-position-bottom{
+	position: relative;
+	top: 0;
+	transform: none;
+}
+.vc-gitem-zone-height-mode-auto:before{
+	padding: 0;
+}
+
+// 健康須知 post
+.healthy{
+	.vc_gitem-post-category-name,
+	.vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item{
+		&:hover{
+			background-color: transparent!important;
+		}
+		a{
+			color: $gray-text;
+			font-size: 12px;
+		}
+	}
+	.vc_gitem-post-data-source-post_title{
+		margin: 0;
+		h2{
+			color: $blue;
+			font-size: 25px;
+			font-weight: 400;
+			&:after{
+				display: block;
+				content: '';
+				height: 3px;
+				width: 25px;
+				background: $gray-light;
+				margin: 5px auto 0;
+			}
+		}
+	}
+}
+
+.post-date-author{
+	text-align: center;
+	> div{
+		display: inline-block;
+		font-size: 12px;
+	}
+}
+
+.vc_gitem-post-data-source-post_excerpt{
+	font-size: 15px;
+	color: $gray;
+}
+
+.vc_grid-filter{
+	margin-bottom: 10px;
+}
+.vc_gitem_row .vc_gitem-col{
+	padding: 3px;
+}
+
+.vc_btn3.vc_btn3-color-grey.vc_btn3-style-modern{
+	background: $blue;
+	color: $white;
+	font-weight: 400;
+	border-radius: 0;
+	padding: 8px 12px;
+	letter-spacing: 5px;
+	border: none;
+	&:hover{
+		background: $blue;
+		color: $white;
+		opacity: 0.8;
+	}
+}
+
+.vc_grid.vc_row .vc_grid-item .wpb_content_element{
+	margin-bottom: 5px;
+}
+.post-bottom-container{
+	text-align: left;
+	.vc_grid-filter{
+		margin-bottom: 5px;
+	}
+}
+@media (max-width: 768px){
+	.vc_responsive .vc_grid-filter {
+		display: block!important;
+	}
+}
+
+body.post-template-default{
+	&.left-sidebar{
+		.widget-area{
+			display: none;
+		}
+		.content-area{
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	.hentry .entry-header span.posted-on{
+		color: $gray-text;
+		a{
+			color: $gray-text;
+			text-decoration: none;
+		}
+	}
+
+	.hentry .entry-header{
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+	.hentry.type-post .entry-meta{
+		display: none;
+	}
+	.hentry.type-post .entry-content{
+		float: none;
+		width: 100%;
+	}
+
+	h1{
+		color: $blue;
+		font-size: 25px;
+	}
+	.hentry.type-post .entry-content{
+		background: $gray-bg;
+		padding: 2em;
+	}
+	.hentry .wp-post-image{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	p{
+		color: $gray-text;
+		font-size: 15px;
+	}
+}
+
+.site-main nav.navigation, .site-main nav.navigation , .site-main nav.navigation {
+	text-align: center;
+	.nav-next, .nav-previous, .nav-next{
+		float: none;
+		width: auto;
+		display: inline-block;
+		margin: 0 5px;
+		a{
+			background: $blue;
+			color: $white;
+			border-radius: 0;
+			font-size: 13px;
+			letter-spacing: 3px;
+			&:before,
+			&:after{
+				display: none;
+			}
+			&:hover{
+				transform: none;
+			}
+		}
+	}
+}
+
+.left-sidebar .no-sidebar-container{
+	&.content-area{
+		float: none;
+		width: 100%;
 	}
 }

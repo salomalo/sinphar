@@ -172,6 +172,16 @@ a.skip-link {
   }
 }
 
+.storefront-hamburger-menu-active .main-navigation .handheld-navigation {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .storefront-hamburger-menu-active .main-navigation .handheld-navigation > ul {
+    margin-top: 0;
+  }
+}
+
 .site-branding {
   padding-bottom: 1.5em;
 }
@@ -320,6 +330,38 @@ button.menu-toggle:hover {
 @media (max-width: 768px) {
   .main-navigation ul ul.sub-menu {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-item-has-children {
+    position: relative;
+  }
+  .menu-item-has-children:after {
+    display: inline-block;
+    content: '';
+    background: url("./images/icon-arrow-bottom.svg") no-repeat center transparent;
+    width: 50px;
+    height: 52px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu-item-has-children ul.sub-menu {
+    margin: 0;
+  }
+  .menu-item-has-children ul li a:hover {
+    color: #11337d;
+  }
+  .main-navigation.toggled .menu-item-has-children.active:after {
+    background: url("./images/icon-arrow-bottom-white.svg") #11337d no-repeat center;
+  }
+  .main-navigation.toggled .menu-item-has-children.active > a {
+    color: #11337d;
+    background: rgba(17, 51, 125, 0.3);
+  }
+  .main-navigation.toggled .menu-item-has-children.active ul.sub-menu {
+    background: rgba(17, 51, 125, 0.1);
   }
 }
 

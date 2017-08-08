@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <!-- theme-update.css -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri().'/assets/theme-update.css'; ?>">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri().'/assets/theme-update.css'.rand(); ?>">
 </head>
 
 <body <?php body_class(); ?>>
@@ -30,6 +30,7 @@
 	jQuery(document).ready(function($){
 		$('.menu-item-has-children').click(function(){
 			$(this).find('.sub-menu').slideToggle('slow');
+			$(this).toggleClass('active');
 		});
 	});
 </script>

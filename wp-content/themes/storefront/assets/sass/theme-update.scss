@@ -183,6 +183,14 @@ a{
 		padding-top: 1.2em;
 	}
 }
+.storefront-hamburger-menu-active .main-navigation .handheld-navigation{
+	border: none;
+	> ul{
+	 	@media (max-width: 768px){
+			margin-top: 0;
+		}
+	}
+}
 .site-branding{
 	padding-bottom: 1.5em;
 }
@@ -298,6 +306,44 @@ button.menu-toggle{
 .main-navigation ul ul.sub-menu{
 	@media (max-width: 768px) {
 		display: none;
+	}
+}
+// mobile dropdown
+@media (max-width: 768px) {
+	.menu-item-has-children{
+		position: relative;
+		&:after{
+			display: inline-block;
+			content: '';
+			background:url('./images/icon-arrow-bottom.svg') no-repeat center transparent;
+			width: 50px;
+			height: 52px;
+			position: absolute;
+			right: 0;
+	    top: 0;
+		}
+		ul.sub-menu{
+			margin: 0;
+		}
+		ul li a:hover{
+			color: $blue;
+		}
+	}
+	.main-navigation.toggled{
+		.menu-item-has-children{
+			&.active{
+				&:after{
+					background: url('./images/icon-arrow-bottom-white.svg') $blue no-repeat center;
+				}
+				> a{
+					color: $blue;
+					background: rgba(17,51,125,0.3);
+				}
+				ul.sub-menu{
+					background: rgba(17,51,125,0.1);
+				}
+			}
+		}
 	}
 }
 

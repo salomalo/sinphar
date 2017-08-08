@@ -68,8 +68,14 @@ a.skip-link {
   .main-navigation ul.menu ul.sub-menu > li {
     background: #fff;
   }
+  .main-navigation ul li {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
   .main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a {
-    padding: 1em 0.6em;
+    padding: 1em 1.2em;
   }
   .main-navigation ul.nav-menu ul.sub-menu > li > a {
     padding: 1em 0.8em;
@@ -642,6 +648,14 @@ footer .norm_row {
   opacity: 0;
   -webkit-transition: .5s;
           transition: .5s;
+}
+
+.home.page:not(.page-template-template-homepage) .site-header {
+  margin-bottom: 0;
+}
+
+.home.page:not(.page-template-template-homepage) .wpb_content_element, .home.page:not(.page-template-template-homepage) .hentry, .home.page:not(.page-template-template-homepage) .page-template-template-fullwidth-php .content-area, .home.page:not(.page-template-template-homepage) .content-area, .home.page:not(.page-template-template-homepage) .site-main {
+  margin: 0;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

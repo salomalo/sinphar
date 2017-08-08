@@ -79,8 +79,11 @@ a{
 		}
 	}
 	
+	.main-navigation ul li{
+		display: inline-flex;
+	}
 	.main-navigation ul.menu>li>a, .main-navigation ul.nav-menu>li>a{
-		padding: 1em .6em;
+		padding: 1em 1.2em;
 	}
 	.main-navigation ul.nav-menu ul.sub-menu>li{
 		> a{
@@ -567,5 +570,15 @@ footer{
 			opacity: 0;
 			transition: .5s;
 		}
+	}
+}
+
+// home
+.home.page:not(.page-template-template-homepage){
+	.site-header{
+		margin-bottom: 0;
+	}
+	.wpb_content_element, .hentry, .page-template-template-fullwidth-php .content-area, .content-area, .site-main{
+		margin: 0;
 	}
 }

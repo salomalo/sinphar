@@ -29,6 +29,10 @@ a{
 		display: none;
 	}
 }
+p{
+	font-size: 15px;
+	line-height: 25px;
+}
 
 // header
 .main-navigation ul li a{
@@ -231,8 +235,18 @@ input[type=search]:focus,
 	}
 }
 
+.search-form{
+	.search-submit{
+		display: none;
+	}
+	label:before{
+		margin-top: 2px;
+	}
+}
+
 .site-search .widget_product_search form:before,
-.aws-container .aws-search-form:before{
+.aws-container .aws-search-form:before,
+.search-form label:before{
 	top: 50%;
 	transform: translate(0, -50%);
 	left: inherit;
@@ -244,7 +258,8 @@ input[type=search]:focus,
 	display: inline-block;
 	position: absolute;
 }
-.aws-container .aws-search-form{
+.aws-container .aws-search-form,
+.search-form label{
 	position: relative;
 }
 .aws-container .aws-search-field{
@@ -1205,7 +1220,8 @@ ul.products{
 	}
 }
 
-body.post-template-default{
+body.post-template-default,
+body.single{
 	&.left-sidebar{
 		.widget-area{
 			display: none;
@@ -1240,7 +1256,7 @@ body.post-template-default{
 		color: $blue;
 		font-size: 25px;
 	}
-	.hentry.type-post .entry-content{
+	.hentry.type-post .entry-content, .entry-content{
 		background: $gray-bg;
 		padding: 2em;
 	}
@@ -1302,15 +1318,19 @@ body.post-template-default{
 		font-size: 25px;
 	}
 }
-.container{
+.container,
+.left-sidebar .content-area.container{
 	padding-left: 1.41575em;
 	padding-right: 1.41575em;
+	float: none;
 	@media (min-width: 768px){
 		max-width: 66.4989378333em;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0 2.617924em;
 		box-sizing: content-box;
+		float: none;
 	}
 }
 
@@ -1388,3 +1408,56 @@ body.post-template-default{
 	}
 }
 
+// 最新活動
+.title-post .vc_custom_heading a{
+	color: $blue;
+	font-size: 25px;
+	font-weight: 400;
+}
+.post-bottom-section{
+	background: $gray-bg;
+	padding: 20px;
+	.vc_gitem-row-position-top{
+		position: relative;
+	}
+	@media (min-width: 768px) {
+		.vc_gitem-col{
+			float: none;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.btn-post{
+		position: absolute;
+		bottom: 20px;
+	}
+	.post-btn-group{
+		position: absolute;
+    bottom: -10px;
+    right: 15px;
+	}
+}
+
+.top-post-data{
+	.wpb_content_element, .vc_gitem-post-data{
+		display: inline-block;
+		color: $gray-text;
+		margin: 0!important;
+		p{
+			margin: 0;
+			font-size: 12px;
+		}
+	}
+}
+
+.news-top-section{
+	color: $blue;
+	text-align: right;
+	.wpb_content_element{
+		display: inline-block;
+		margin: 0;
+		&:first-child{
+			margin-right: 10px;
+		}
+	}
+}

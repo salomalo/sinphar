@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -28,5 +28,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer();

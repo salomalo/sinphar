@@ -7,7 +7,9 @@ $gray: #3f3b3b;
 $gray-text: #595757;
 $gray-border: #b5b6b6;
 $gray-light: #d4d4d5;
+$gray-lighter: #f3f3f3;
 $gray-bg: #f0f0f0;
+$gray-faq: #dbdcdc;
 
 // body
 body{
@@ -399,7 +401,7 @@ footer{
 	}
 	.footer-widgets{
 		border-bottom: none;
-		padding-top: 0;
+		padding-top: 2%;
 		p{
 			padding-top: 15px;
 			font-size: 12px;
@@ -1283,3 +1285,106 @@ body.post-template-default{
 		width: 100%;
 	}
 }
+
+// faq
+.left-title-group{
+	max-width: 70%;
+	h1, h2{
+		letter-spacing: 5px;
+		margin-bottom: 6px;
+		font-family: "Source Sans Pro",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif!important;
+		font-weight: 400;
+	}
+	h1{
+		font-size: 44px;
+	}
+	h2{
+		font-size: 25px;
+	}
+}
+.container{
+	padding-left: 1.41575em;
+	padding-right: 1.41575em;
+	@media (min-width: 768px){
+		max-width: 66.4989378333em;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 2.617924em;
+		box-sizing: content-box;
+	}
+}
+
+// faq tab
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel{
+	.vc_tta-panel-heading{
+		background-color: $gray-faq!important;
+		border: none;
+		position: relative;
+		border-radius: 0!important;
+	}
+	h4, a{
+		color: $blue!important;
+		line-height: 1.5;
+	}
+	.vc_active .vc_tta-panel-heading{
+		h4, a{
+			color: $blue!important;
+		}
+	}
+	.vc_tta-panel-body{
+		background-color: $gray-lighter!important;
+		border: none!important;
+		padding: 4% 6%!important;
+		border-radius: 0!important;
+		p{
+			font-size: 15px;
+			color: $gray-text;
+		}
+	}
+}
+
+.page-template{
+	.vc_tta.vc_tta-accordion {
+		// active
+		.vc_active{
+			.vc_tta-controls-icon-position-left .vc_tta-controls-icon{
+				&.vc_tta-controls-icon-plus{
+					&::before{
+						transform: rotate(180deg);
+						margin-top: -12px;
+					}
+				}
+			}
+		}
+
+		.vc_tta-controls-icon-position-left {
+			// normal
+			.vc_tta-controls-icon{
+				left: inherit;
+				right: 0;
+				width: 72px;
+		    height: 100%;
+		    background:rgba(17,51,125,0.3);
+				&.vc_tta-controls-icon-plus{
+					&::before{
+						background:url('./images/icon-arrow-bottom-white.svg') no-repeat center;
+						width: 25px;
+						height: 25px;
+						content: '';
+						background-size: cover;
+						border: none;
+						margin-left: 23px;
+					}
+					&::after{
+						display: none;
+						border: none;
+					}
+				}
+			}
+			&.vc_tta-panel-title>a{
+				padding: 25px 75px 25px 25px;
+			}
+		}
+	}
+}
+

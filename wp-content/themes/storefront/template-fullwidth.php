@@ -7,7 +7,11 @@
  * @package storefront
  */
 
-get_header(); ?>
+if(is_front_page()){
+	get_header('home');
+}else{
+	get_header();
+};?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

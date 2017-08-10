@@ -22,12 +22,16 @@ a{
 	color: $blue;
 	transition: .3s;
 	text-decoration: none;
+	outline: none;
 	&:hover{
 		color: $green;
 	}
 	&.skip-link{
 		display: none;
 	}
+}
+button{
+	outline: none;
 }
 p{
 	font-size: 15px;
@@ -51,8 +55,14 @@ p{
 
 // logo
 @media (min-width: 768px){
+	body:not(.home) .primary-navigation {
+		width: 90%;
+		margin: 0 auto;
+	}
 	.main-navigation ul.menu, .main-navigation ul.nav-menu{
 		text-align: center;
+		display: inline-flex;
+    width: 100%;
 	}
 	.main-navigation ul.menu>li>a,
 	.main-navigation ul.nav-menu>li>a,
@@ -86,14 +96,18 @@ p{
 		z-index: 300;
 		> li{
 			background: $white;
+			flex: 1;
 		}
 	}
 	
-	.main-navigation ul li{
-		display: inline-flex;
+	.main-navigation ul.nav-menu > li{
+		width: 12.5%;
+    text-align: center;
 	}
 	.main-navigation ul.menu>li>a, .main-navigation ul.nav-menu>li>a{
-		padding: 1em 1.2em;
+		padding: 1em 0;
+		display: block;
+    width: 100%;
 	}
 	.main-navigation ul.nav-menu ul.sub-menu>li{
 		> a{
@@ -284,7 +298,7 @@ input[type=search]:focus,
 		float: none;
 		position: absolute;
 		left: 50%;
-    top: 50%;
+    top: 35%;
     transform: translate(-50%, -50%);
     padding: 0;
 	}
@@ -1458,6 +1472,81 @@ body.single{
 		margin: 0;
 		&:first-child{
 			margin-right: 10px;
+		}
+	}
+}
+
+// home header
+body.home{
+	footer, .site-header-cart{
+		display: none;
+	}
+	@media (min-width: 768px) {
+		.main-navigation ul.menu>li:first-child, .main-navigation ul.nav-menu>li:first-child {
+			margin-left: 0;
+		}
+		header{
+			position: absolute;
+			width: 100%;
+			background: transparent;
+		}
+		.rev_slider.fullwidthabanner{
+			padding-top: 159px;
+		}
+		&.woocommerce-active .site-header .site-search{
+			display: none;
+	    position: absolute;
+	    left: 14%;
+	    width: 20%;
+	    top: auto;
+	    margin: 0;
+		}
+	}
+	.btn-search{
+		display: none;
+	}
+}
+@media (min-width: 768px) {
+	.site-header.header-home{
+		padding: 0;
+		.header-top{
+			background: $blue;
+			color: $white;
+			text-align: right;
+			margin-bottom: 10px;
+			a{
+				color: $white;
+				font-size: 13px;
+			}
+			.user-btns-group{
+				margin-top: 4px;
+				margin-bottom: 4px;
+			}
+		}
+		.site-branding, .storefront-primary-navigation{
+			display: inline-block;
+			float: none;
+			vertical-align: middle;
+		}
+		.site-branding{
+			width: 14%;
+			float: left;
+		}
+		.storefront-primary-navigation{
+			width: 78%;
+			box-shadow: none;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		.btn-search{
+			display: inline-block;
+	    height: 85px;
+	    width: 2%;
+	    background:transparent;
+			vertical-align: middle;
+			background: url('./images/icon-search-blue.svg') no-repeat center;
 		}
 	}
 }

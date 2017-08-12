@@ -34,6 +34,11 @@ a{
 button{
 	outline: none;
 }
+h1, h2, .alpha, h2 a{
+	font-size: 25px;
+	color: $blue;
+	font-weight: 400;
+}
 p{
 	font-size: 15px;
 	line-height: 25px;
@@ -68,7 +73,10 @@ input[type="submit"]{
 		opacity: 0.8;
 	}
 }
-// header
+.hentry .entry-header{
+	border-bottom: none;
+}
+// header: ;
 .main-navigation ul li a{
 	color: $blue;
 	&:hover{
@@ -1470,7 +1478,8 @@ body.single{
 	font-size: 25px;
 	font-weight: 400;
 }
-.post-bottom-section{
+.post-bottom-section,
+body.search-results .entry-content{
 	background: $gray-bg;
 	padding: 20px;
 	.vc_gitem-row-position-top{
@@ -1673,6 +1682,24 @@ body.single .entry-content{
 	}
 	.center-container{
 		text-align: center;
+	}
+}
+
+// search result
+body.search-results{
+	.hentry .entry-header{
+		margin-bottom: 0;
+	}
+	.entry-content{
+		.wp-post-image, p{
+			display: inline-block;
+			width: 50%;
+			vertical-align: middle;
+		}
+		.wp-post-image{
+			margin: 0 5% 0 0;
+			width: 45%;
+		}
 	}
 }
 

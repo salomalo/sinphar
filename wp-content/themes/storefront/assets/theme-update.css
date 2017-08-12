@@ -27,6 +27,12 @@ button {
   outline: none;
 }
 
+h1, h2, .alpha, h2 a {
+  font-size: 25px;
+  color: #11337d;
+  font-weight: 400;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -67,6 +73,10 @@ input[type="submit"]:hover {
   background: #11337d;
   color: #fff;
   opacity: 0.8;
+}
+
+.hentry .entry-header {
+  border-bottom: none;
 }
 
 .main-navigation ul li a {
@@ -1631,29 +1641,34 @@ body.single p {
   font-weight: 400;
 }
 
-.post-bottom-section {
+.post-bottom-section,
+body.search-results .entry-content {
   background: #f0f0f0;
   padding: 20px;
 }
 
-.post-bottom-section .vc_gitem-row-position-top {
+.post-bottom-section .vc_gitem-row-position-top,
+body.search-results .entry-content .vc_gitem-row-position-top {
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .post-bottom-section .vc_gitem-col {
+  .post-bottom-section .vc_gitem-col,
+  body.search-results .entry-content .vc_gitem-col {
     float: none;
     display: inline-block;
     vertical-align: middle;
   }
 }
 
-.post-bottom-section .btn-post {
+.post-bottom-section .btn-post,
+body.search-results .entry-content .btn-post {
   position: absolute;
   bottom: 20px;
 }
 
-.post-bottom-section .post-btn-group {
+.post-bottom-section .post-btn-group,
+body.search-results .entry-content .post-btn-group {
   position: absolute;
   bottom: -10px;
   right: 15px;
@@ -1839,6 +1854,21 @@ body.single .entry-content {
 
 .contact-form-container .center-container {
   text-align: center;
+}
+
+body.search-results .hentry .entry-header {
+  margin-bottom: 0;
+}
+
+body.search-results .entry-content .wp-post-image, body.search-results .entry-content p {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+body.search-results .entry-content .wp-post-image {
+  margin: 0 5% 0 0;
+  width: 45%;
 }
 
 .onsale, .wc-points-rewards-product-message, p.price, .cart {

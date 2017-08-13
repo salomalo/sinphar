@@ -116,7 +116,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Button wrap
 			function gridlist_buttonwrap_open() {
-				echo apply_filters( 'gridlist_button_wrap_start', '<a class="btn-blue" href="'.get_site_url().'/store-locator">查詢杏輝專櫃門市</a><div class="gridlist-buttonwrap">' );
+				echo apply_filters( 'gridlist_button_wrap_start', '<div class="gridlist-buttonwrap">' );
 			}
 			function gridlist_buttonwrap_close() {
 				echo apply_filters( 'gridlist_button_wrap_end', '</div>' );

@@ -43,7 +43,7 @@ label {
   font-size: 15px;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice {
   background: transparent;
   border: 1px solid #11337d;
   box-shadow: none;
@@ -54,12 +54,12 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
           transition: .3s;
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus, .input-text:focus, .select2-container .select2-choice:focus {
   background: transparent;
   border-color: #128043;
 }
 
-input[type="submit"] {
+input[type="submit"], .rmagic .buttonarea input[type='button'] {
   background: #11337d;
   color: #fff;
   letter-spacing: 5px;
@@ -69,7 +69,7 @@ input[type="submit"] {
           transition: .3s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, .rmagic .buttonarea input[type='button']:hover {
   background: #11337d;
   color: #fff;
   opacity: 0.8;
@@ -99,9 +99,14 @@ input[type="submit"]:hover {
   color: #11337d;
 }
 
-button.alt {
+button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .widget a.button.checkout {
   background: #11337d !important;
   border-color: #11337d !important;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+  margin-bottom: 1em;
+  background: #11337d;
 }
 
 .main-navigation ul li a {
@@ -203,7 +208,7 @@ button.alt {
     margin-left: 2%;
   }
   .user-btns-group, .site-search {
-    margin-top: 15px;
+    margin-top: 30px;
   }
 }
 
@@ -216,11 +221,13 @@ button.alt {
 .woocommerce-active .site-header .site-header-cart {
   width: auto;
   position: relative;
+  top: 15px;
 }
 
 @media (max-width: 767px) {
   .woocommerce-active .site-header .site-header-cart {
     float: right;
+    top: 0;
   }
 }
 
@@ -867,6 +874,15 @@ footer .norm_row {
 
 body:not(.page-template-template-fullwidth) .col-full {
   padding: 2% 0;
+}
+
+body:not(.page-template-template-fullwidth).woocommerce-account .site-content .col-full {
+  max-width: none;
+}
+
+body:not(.page-template-template-fullwidth).woocommerce-account .hentry, body:not(.page-template-template-fullwidth).woocommerce-account .site-main, body:not(.page-template-template-fullwidth).woocommerce-account .no-sidebar-container.content-area .woocommerce {
+  margin: 0 auto;
+  padding-top: 2%;
 }
 
 @media (max-width: 767px) {
@@ -1599,7 +1615,8 @@ body.single p {
 }
 
 .container,
-.left-sidebar .content-area.container {
+.left-sidebar .content-area.container,
+body.woocommerce-account .no-sidebar-container {
   padding-left: 1.41575em;
   padding-right: 1.41575em;
   float: none;
@@ -1607,7 +1624,8 @@ body.single p {
 
 @media (min-width: 768px) {
   .container,
-  .left-sidebar .content-area.container {
+  .left-sidebar .content-area.container,
+  body.woocommerce-account .no-sidebar-container {
     max-width: 66.4989378333em;
     width: 100%;
     margin-left: auto;
@@ -1923,14 +1941,24 @@ body.search-results .entry-content .wp-post-image {
   text-align: center;
 }
 
-.my-account .col-full {
+.my-account .site-header .col-full {
+  padding-bottom: 0;
+}
+
+.my-account .site-content .col-full {
   padding: 0 !important;
 }
 
-.my-account > .site-content #customer_login {
+@media (max-width: 568px) {
+  .my-account .site-content .col-full {
+    margin: 0;
+  }
+}
+
+.my-account > .site-content .customer_login {
   background: url("./images/banner-login.jpg") no-repeat center;
   background-size: cover;
-  padding-top: 5%;
+  padding: 8% 0;
 }
 
 @media (max-width: 768px) {
@@ -1960,6 +1988,10 @@ body.search-results .entry-content .wp-post-image {
   line-height: 1.2;
 }
 
+.my-account .l-login-form h2, .my-account .r-register-form h2 {
+  letter-spacing: 5px;
+}
+
 .my-account .l-login-form input[type=text], .my-account .l-login-form input[type=email], .my-account .l-login-form input[type=password], .my-account .r-register-form input[type=text], .my-account .r-register-form input[type=email], .my-account .r-register-form input[type=password] {
   background: rgba(255, 255, 255, 0.6);
 }
@@ -1987,7 +2019,7 @@ body.search-results .entry-content .wp-post-image {
 
 .my-account .l-login-form .l-btn, .my-account .l-login-form .r-btn, .my-account .r-register-form .l-btn, .my-account .r-register-form .r-btn {
   display: block;
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 
 .my-account .l-login-form .l-btn p, .my-account .l-login-form .r-btn p, .my-account .r-register-form .l-btn p, .my-account .r-register-form .r-btn p {
@@ -2020,7 +2052,7 @@ body.search-results .entry-content .wp-post-image {
   font-size: 13px;
   padding: 6px 25px;
   font-weight: 400;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 @media (min-width: 768px) {
@@ -2031,6 +2063,48 @@ body.search-results .entry-content .wp-post-image {
 
 .single-product div.product p.price {
   margin: 6px 0;
+}
+
+.form-row label {
+  text-align: left;
+}
+
+fieldset {
+  background: transparent;
+}
+
+.signup .rmheader {
+  text-align: center;
+  color: #11337d;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .rmfield {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .rmagic .rmrow .rminput input[type="text"], .rmagic .rmrow .rminput input[type="email"], .rmagic .rmrow .rminput input[type="number"] {
+    width: 100%;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.rmagic .rmrow .rminput input[type="number"] {
+  border: 1px solid #11337d !important;
+}
+
+.rmagic .rmrow .rminput input[type="number"]:focus {
+  border: 1px solid #128043 !important;
+}
+
+.onsale, .up-sells.upsells {
+  display: none;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

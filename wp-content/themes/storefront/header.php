@@ -50,7 +50,7 @@
 				<?php } else{ ?>
 					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
 					<span> | </span>	
-					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">註冊</a>
+					<a href="<?php echo esc_url( home_url( '/signup' ) ); ?>">註冊</a>
 				<?php } ?>
 			</div>
 			<?php

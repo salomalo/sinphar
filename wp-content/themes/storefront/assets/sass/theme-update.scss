@@ -48,7 +48,7 @@ label{
 	color: $blue;
 	font-size: 15px;
 }
-input[type=text],input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
+input[type=text],input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice{
 	background: transparent;
 	border: 1px solid $blue;
 	box-shadow: none;
@@ -61,7 +61,7 @@ input[type=text],input[type=email], input[type=password], input[type=search], in
 		border-color: $green;
 	}
 }
-input[type="submit"]{
+input[type="submit"], .rmagic .buttonarea input[type='button']{
 	background: $blue;
 	color: $white;
 	letter-spacing: 5px;
@@ -83,9 +83,13 @@ input[type="submit"]{
 		color: $blue;
 	}
 }
-button.alt{
+button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .widget a.button.checkout{
 	background: $blue!important;
 	border-color: $blue!important;
+}
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments{
+	margin-bottom: 1em;
+	background:$blue;
 }
 // header: ;
 .main-navigation ul li a{
@@ -198,7 +202,7 @@ button.alt{
 		margin-left: 2%;
 	}
 	.user-btns-group, .site-search{
-		margin-top: 15px;
+		margin-top: 30px;
 	}
 }
 
@@ -213,8 +217,10 @@ button.alt{
 .woocommerce-active .site-header .site-header-cart{
 	width: auto;
 	position: relative;
+	top: 15px;	
 	@media (max-width: 767px) {
 		float: right;
+		top: 0;
 	}
 }
 .site-header-cart .cart-contents{
@@ -744,6 +750,15 @@ body.page-template-template-fullwidth .site-content{
 body:not(.page-template-template-fullwidth) {
 	.col-full{
 		padding: 2% 0;
+	}
+	&.woocommerce-account{
+		.site-content .col-full{
+			max-width: none;
+		}
+		.hentry, .site-main, .no-sidebar-container.content-area .woocommerce{
+			margin: 0 auto;
+			padding-top: 2%;
+		}
 	}
 	@media (max-width: 767px) {
 		.site-header{
@@ -1420,7 +1435,8 @@ body.single{
 	}
 }
 .container,
-.left-sidebar .content-area.container{
+.left-sidebar .content-area.container,
+body.woocommerce-account .no-sidebar-container{
 	padding-left: 1.41575em;
 	padding-right: 1.41575em;
 	float: none;
@@ -1748,13 +1764,21 @@ body.search-results{
 		margin: 0 auto;
 		text-align: center;
 	}
-	.col-full{
-		padding: 0!important;
+	.site-header{
+		.col-full{
+			padding-bottom: 0;
+		}
 	}
-	> .site-content #customer_login{
+	.site-content .col-full{
+		padding: 0!important;
+		@media (max-width: 568px){
+			margin: 0;
+		}
+	}
+	> .site-content .customer_login{
 		background: url('./images/banner-login.jpg') no-repeat center;
 		background-size: cover;
-		padding-top: 5%;
+		padding: 8% 0;
 	}
 
 	.l-login-form{
@@ -1781,6 +1805,9 @@ body.search-results{
 			font-size: 15px;
 			line-height: 1.2;
 		}
+		h2{
+			letter-spacing: 5px;
+		}
 
 		input[type=text], input[type=email], input[type=password]{
 			background: rgba(255,255,255,0.6);
@@ -1795,7 +1822,7 @@ body.search-results{
 		}
 		.l-btn, .r-btn{
 			display: block;
-			margin: 0;
+			margin: 5px 0 0 0;
 			p{
 				display: block;
 			}
@@ -1822,7 +1849,7 @@ body.search-results{
 				font-size: 13px;
 				padding: 6px 25px;
 				font-weight: 400;
-				margin-top: 10%;
+				margin-top: 12%;
 			}
 		}
 	}
@@ -1838,7 +1865,46 @@ body.search-results{
 	margin: 6px 0;
 }
 
+.form-row label{
+	text-align: left;
+}
+
+// 註冊 signup
+fieldset{
+	background: transparent;
+}
+.signup .rmheader{
+	text-align: center;
+	color: $blue;
+	display: none;
+}
+@media (min-width: 768px) {
+	.rmfield{
+		text-align: right;
+	}
+}
+@media (max-width: 767px) {
+	.rmagic .rmrow .rminput input{
+		&[type="text"], &[type="email"], &[type="number"]{
+			width: 100%;
+		}
+	}
+}
+.center{
+	text-align: center;
+}
+
+.rmagic .rmrow .rminput input[type="number"]{
+	border: 1px solid $blue!important;
+	&:focus{
+		border: 1px solid $green!important;
+	}
+}
+
 // 暫時隱藏
+.onsale, .up-sells.upsells{
+	display: none;
+}
 // .onsale, .wc-points-rewards-product-message, p.price, .cart{
 // 	display: none;
 // }

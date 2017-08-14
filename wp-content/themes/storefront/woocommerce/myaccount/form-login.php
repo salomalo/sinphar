@@ -21,6 +21,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<div class="customer_login">
+
+<style>
+	body.woocommerce-account .no-sidebar-container {
+    max-width: none;
+    padding: 0;
+	}
+	.left-sidebar .no-sidebar-container.content-area{
+		margin: 0;
+	}
+	body:not(.page-template-template-fullwidth).woocommerce-account .no-sidebar-container.content-area .woocommerce{
+		padding: 0;
+	}
+	@media (max-width: 66.4989378333em){
+		.site-content > .col-full {
+			margin: 0;
+		}
+	}
+</style>
 
 <?php wc_print_notices(); ?>
 
@@ -33,7 +52,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="u-column1 col-1">
 
 <?php endif; ?>
-		
+
+<div class="container">
 		<div class="l-login-form">
 			<h2>杏輝之友</h2>
 
@@ -70,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</form>
 		</div>
 
-<?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
+<?php if( isset( $_GET['action']) && $_GET['action'] == "register"){ ?>
 
 	</div>
 
@@ -122,7 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 </div>
-<?php endif; ?>
+<?php }else{ ?>
 
 <div class="r-register-form">
 	<h2>還沒有加入杏輝之友嗎？</h2>
@@ -131,7 +151,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>加入杏輝，有三大好處：</p>
 		<p>加入杏輝，有三大好處：</p>
 		<p>加入杏輝，有三大好處：</p>
-		<a href="" class="btn-blue">立即註冊</a>
+		<a class="btn-blue" href="<?php echo get_site_url().'/signup';?>"> 立即註冊 </a>
 	</div>
 </div>
+</div>
+</div>
+<?php } ?>
+
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>

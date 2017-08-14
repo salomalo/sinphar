@@ -14,13 +14,13 @@ get_header(); ?>
 	$offset = empty($_GET['pages']) ? 0 : ((int)$_GET['pages'] - 1) * $limit;
 	$conditions = 'pl.city = "' . $_GET['country'] . '" AND pl.address_1 LIKE "%' . $_GET['district'] . '%"';
 	$queryString = 'SELECT pl.*, pm.meta_value AS `phone`
-		FROM `wp_woocommerce_pickup_locations_geodata` pl 
-		INNER JOIN `wp_postmeta` pm ON pm.post_id = pl.post_id AND pm.meta_key = "_pickup_location_phone"
+		FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl 
+		INNER JOIN `' . $wpdb->base_prefix . 'postmeta` pm ON pm.post_id = pl.post_id AND pm.meta_key = "_pickup_location_phone"
 		WHERE ' . $conditions;
 	$queryString .= ' LIMIT ' . $limit . ' OFFSET ' . $offset;
 	$locations = empty($_GET) ? array() : $wpdb->get_results($queryString);
 
-	$totalQuery = 'SELECT COUNT(pl.post_id) AS `count` FROM `wp_woocommerce_pickup_locations_geodata` pl WHERE ' . $conditions;
+	$totalQuery = 'SELECT COUNT(pl.post_id) AS `count` FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl WHERE ' . $conditions;
 	$total = $wpdb->get_results($totalQuery);
  ?>
 

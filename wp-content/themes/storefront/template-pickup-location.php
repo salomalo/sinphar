@@ -22,6 +22,8 @@ get_header(); ?>
 
 	$totalQuery = 'SELECT COUNT(pl.post_id) AS `count` FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl WHERE ' . $conditions;
 	$total = $wpdb->get_results($totalQuery);
+
+	$google_map_api_key = 'AIzaSyAZeiklDV11AJeUgqzCYaNvqGMtCo7KlWQ';
  ?>
 
 	<div id="primary" class="content-area no-sidebar-container">
@@ -62,7 +64,17 @@ get_header(); ?>
 					<td><?php echo '00'; ?></td>
 					<td><?php echo $local->phone; ?></td>
 					<td><?php echo $local->city . $local->address_1; ?></td>
-					<td>lat: <?php echo $local->lat; ?> lon: <?php echo $local->lon; ?></td>
+					<td>
+					<?php if (empty(wp_is_mobile())): ?>
+						<button onclick="openMap('<?php echo $local->city . $local->address_1; ?>')">MAP</button>
+					<?php else: ?>
+						<div class="mobile-map">
+							<button class="mobile-map-on">MAP</button>
+							<div class="mobile-map-iframe" data-local="<?php echo $local->city . $local->address_1; ?>"></div>
+							<button style="display: none;" class="mobile-map-off">返回</button>
+						</div>
+					<?php endif ?>
+					</td>
 				</tr>
 			<?php endforeach ?>
 			</tbody>
@@ -82,6 +94,8 @@ get_header(); ?>
 					data-currentPage="<?php echo $_GET['pages']; ?>"
 					data-total="<?php echo $total[0]->count; ?>" 
 					data-href="<?php echo $queryParams . '&pages='; ?>"></div>
+
+			<div id="map-key" style="display: none;" data-key="<?php echo $google_map_api_key; ?>"></div>
 		<?php endif ?>
 
 			<?php
@@ -117,6 +131,42 @@ get_header(); ?>
 		el: ".tw-selector" // 同 DOM querySelector()
 	});
 </script>
+<?php if (empty(wp_is_mobile())): ?>
+<script type="text/javascript">
+	var openMap = function(place) {
+		window.open (
+			'https://www.google.com/maps/embed/v1/place?key='
+		  + document.getElementById('map-key').getAttribute('data-key')
+		  + '&q=' + place, 
+			'mywindow',
+			'location=1,status=1,scrollbars=1, width=500,height=500'
+		);
+		return true;
+	};
+</script>
+<?php else: ?>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('.mobile-map-on').click(function() {
+			$(this).hide();
+			var iframeBlock = $(this).closest('div.mobile-map').find('.mobile-map-iframe');
+			var src = 
+				'https://www.google.com/maps/embed/v1/place?key='
+			  + $('#map-key').data('key')
+			  + '&q=' + iframeBlock.data('local');
+			$('<iframe />', {
+				src: src
+			}).appendTo(iframeBlock);
+			$(this).closest('div.mobile-map').find('.mobile-map-off').show();
+		});
+		$('.mobile-map-off').click(function() {
+			$(this).hide();
+			$('.mobile-map-iframe').find('iframe').remove();
+			$(this).closest('div.mobile-map').find('.mobile-map-on').show();
+		});
+	});
+</script>
+<?php endif ?>
 
 <?php
 get_footer();

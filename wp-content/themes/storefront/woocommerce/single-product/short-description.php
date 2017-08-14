@@ -27,11 +27,43 @@ if ( ! $post->post_excerpt ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description">
-    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
-</div>
-<a class="btn-blue" href="<?php echo get_site_url().'/store-locator'?>">
-	查詢杏輝專櫃門市
-</a>
+
+<div class="product-detail">
+	<?php if ( get_post_type() == 'product' && !is_single() ){ ?>
+	<?php
+		global $woocommerce;
+		$currency = get_woocommerce_currency_symbol();
+		$price = get_post_meta( get_the_ID(), '_regular_price', true);
+		$sale = get_post_meta( get_the_ID(), '_sale_price', true);
+		$link = get_permalink( get_the_ID());
+
+		get_post_type();
+	?>
+	
+	<a href="<?php echo $link; ?>">
+		<h2 class="woocommerce-loop-product__title"><?php echo $post->post_title ?></h2>
+	</a>
+	
+	<?php if($sale) : ?>
+		<p class="product-price-tickr"><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></p>    
+	<?php elseif($price) : ?>
+		<p class="product-price-tickr"><?php echo $currency; echo $price; ?></p>    
+	<?php endif; ?>
+
+	<div class="woocommerce-product-details__short-description">
+	    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+	</div>
+	<a class="btn-blue" href="<?php echo get_site_url().'/store-locator'?>">
+		查詢杏輝專櫃門市
+	</a>
+<?php }else{?>
+		<div class="woocommerce-product-details__short-description">
+		    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+		</div>
+		<a class="btn-blue" href="<?php echo get_site_url().'/store-locator'?>">
+			查詢杏輝專櫃門市
+		</a>
+	</div>
+<?php } ?>
 
 

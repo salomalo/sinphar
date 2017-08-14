@@ -10,6 +10,7 @@ $gray-light: #d4d4d5;
 $gray-lighter: #f3f3f3;
 $gray-bg: #f0f0f0;
 $gray-faq: #dbdcdc;
+$gray-login: #aaabab;
 $font: 'Noto Sans TC', sans-serif;
 
 // body
@@ -75,6 +76,12 @@ input[type="submit"]{
 }
 .hentry .entry-header{
 	border-bottom: none;
+}
+.widget_search form:before, .widget_product_search form:before{
+	top: .7em;
+	&::placeholder{
+		color: $blue;
+	}
 }
 // header: ;
 .main-navigation ul li a{
@@ -1699,6 +1706,100 @@ body.search-results{
 		.wp-post-image{
 			margin: 0 5% 0 0;
 			width: 45%;
+		}
+	}
+}
+
+// login & signup
+.my-account{
+	.woocommerce{
+		clear: both;
+		overflow: hidden;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.col-full{
+		padding: 0!important;
+	}
+	> .site-content #customer_login{
+		background: url('./images/banner-login.jpg') no-repeat center;
+		background-size: cover;
+		padding-top: 5%;
+	}
+
+	.l-login-form{
+		@media (max-width: 768px) {
+			margin-bottom: 10%;
+			border-bottom: 1px solid $gray-border;
+		}
+	}
+
+	.l-login-form, .r-register-form{
+		@media (min-width: 768px) {
+			display: inline-block;
+			width: 45%;
+			padding: 0 5%;
+			vertical-align: top;
+			margin: 0 auto;
+		}
+		
+		p,h2{
+			text-align: center;
+		}
+		p{
+			color: $blue;
+			font-size: 15px;
+			line-height: 1.2;
+		}
+
+		input[type=text], input[type=email], input[type=password]{
+			background: rgba(255,255,255,0.6);
+			&::placeholder{
+				color: $gray-login;
+			}
+		}
+		
+		.woocomerce-form{
+			clear: both;
+			overflow: hidden;
+		}
+		.l-btn, .r-btn{
+			display: block;
+			margin: 0;
+			p{
+				display: block;
+			}
+		}
+		.l-btn{
+			float: left;
+		}
+		.r-btn{
+			float: right;
+			line-height: 2.3;
+		}
+
+		.btn-green{
+			background: $green;
+			color: $white;
+			padding: 6px 15px;
+			letter-spacing: 5px;
+			font-size: 15px;
+		}
+		.register-content{
+			padding-top: 12%;
+			.btn-blue{
+				display: inline-block;
+				font-size: 13px;
+				padding: 6px 25px;
+				font-weight: 400;
+				margin-top: 10%;
+			}
+		}
+	}
+
+	.l-login-form{
+		@media (min-width: 768px) {
+			border-right: 1px solid $gray-border;
 		}
 	}
 }

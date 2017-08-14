@@ -79,6 +79,26 @@ input[type="submit"]:hover {
   border-bottom: none;
 }
 
+.widget_search form:before, .widget_product_search form:before {
+  top: .7em;
+}
+
+.widget_search form:before::-webkit-input-placeholder, .widget_product_search form:before::-webkit-input-placeholder {
+  color: #11337d;
+}
+
+.widget_search form:before::-moz-placeholder, .widget_product_search form:before::-moz-placeholder {
+  color: #11337d;
+}
+
+.widget_search form:before:-ms-input-placeholder, .widget_product_search form:before:-ms-input-placeholder {
+  color: #11337d;
+}
+
+.widget_search form:before::placeholder, .widget_product_search form:before::placeholder {
+  color: #11337d;
+}
+
 .main-navigation ul li a {
   color: #11337d;
 }
@@ -1869,6 +1889,119 @@ body.search-results .entry-content .wp-post-image, body.search-results .entry-co
 body.search-results .entry-content .wp-post-image {
   margin: 0 5% 0 0;
   width: 45%;
+}
+
+.my-account .woocommerce {
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.my-account .col-full {
+  padding: 0 !important;
+}
+
+.my-account > .site-content #customer_login {
+  background: url("./images/banner-login.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .my-account .l-login-form {
+    margin-bottom: 10%;
+    border-bottom: 1px solid #b5b6b6;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-account .l-login-form, .my-account .r-register-form {
+    display: inline-block;
+    width: 45%;
+    padding: 0 5%;
+    vertical-align: top;
+    margin: 0 auto;
+  }
+}
+
+.my-account .l-login-form p, .my-account .l-login-form h2, .my-account .r-register-form p, .my-account .r-register-form h2 {
+  text-align: center;
+}
+
+.my-account .l-login-form p, .my-account .r-register-form p {
+  color: #11337d;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.my-account .l-login-form input[type=text], .my-account .l-login-form input[type=email], .my-account .l-login-form input[type=password], .my-account .r-register-form input[type=text], .my-account .r-register-form input[type=email], .my-account .r-register-form input[type=password] {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.my-account .l-login-form input[type=text]::-webkit-input-placeholder, .my-account .l-login-form input[type=email]::-webkit-input-placeholder, .my-account .l-login-form input[type=password]::-webkit-input-placeholder, .my-account .r-register-form input[type=text]::-webkit-input-placeholder, .my-account .r-register-form input[type=email]::-webkit-input-placeholder, .my-account .r-register-form input[type=password]::-webkit-input-placeholder {
+  color: #aaabab;
+}
+
+.my-account .l-login-form input[type=text]::-moz-placeholder, .my-account .l-login-form input[type=email]::-moz-placeholder, .my-account .l-login-form input[type=password]::-moz-placeholder, .my-account .r-register-form input[type=text]::-moz-placeholder, .my-account .r-register-form input[type=email]::-moz-placeholder, .my-account .r-register-form input[type=password]::-moz-placeholder {
+  color: #aaabab;
+}
+
+.my-account .l-login-form input[type=text]:-ms-input-placeholder, .my-account .l-login-form input[type=email]:-ms-input-placeholder, .my-account .l-login-form input[type=password]:-ms-input-placeholder, .my-account .r-register-form input[type=text]:-ms-input-placeholder, .my-account .r-register-form input[type=email]:-ms-input-placeholder, .my-account .r-register-form input[type=password]:-ms-input-placeholder {
+  color: #aaabab;
+}
+
+.my-account .l-login-form input[type=text]::placeholder, .my-account .l-login-form input[type=email]::placeholder, .my-account .l-login-form input[type=password]::placeholder, .my-account .r-register-form input[type=text]::placeholder, .my-account .r-register-form input[type=email]::placeholder, .my-account .r-register-form input[type=password]::placeholder {
+  color: #aaabab;
+}
+
+.my-account .l-login-form .woocomerce-form, .my-account .r-register-form .woocomerce-form {
+  clear: both;
+  overflow: hidden;
+}
+
+.my-account .l-login-form .l-btn, .my-account .l-login-form .r-btn, .my-account .r-register-form .l-btn, .my-account .r-register-form .r-btn {
+  display: block;
+  margin: 0;
+}
+
+.my-account .l-login-form .l-btn p, .my-account .l-login-form .r-btn p, .my-account .r-register-form .l-btn p, .my-account .r-register-form .r-btn p {
+  display: block;
+}
+
+.my-account .l-login-form .l-btn, .my-account .r-register-form .l-btn {
+  float: left;
+}
+
+.my-account .l-login-form .r-btn, .my-account .r-register-form .r-btn {
+  float: right;
+  line-height: 2.3;
+}
+
+.my-account .l-login-form .btn-green, .my-account .r-register-form .btn-green {
+  background: #128043;
+  color: #fff;
+  padding: 6px 15px;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
+
+.my-account .l-login-form .register-content, .my-account .r-register-form .register-content {
+  padding-top: 12%;
+}
+
+.my-account .l-login-form .register-content .btn-blue, .my-account .r-register-form .register-content .btn-blue {
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 25px;
+  font-weight: 400;
+  margin-top: 10%;
+}
+
+@media (min-width: 768px) {
+  .my-account .l-login-form {
+    border-right: 1px solid #b5b6b6;
+  }
 }
 
 .onsale, .wc-points-rewards-product-message, p.price, .cart {

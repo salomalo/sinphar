@@ -99,6 +99,11 @@ input[type="submit"]:hover {
   color: #11337d;
 }
 
+button.alt {
+  background: #11337d !important;
+  border-color: #11337d !important;
+}
+
 .main-navigation ul li a {
   color: #11337d;
 }
@@ -412,7 +417,7 @@ input[type=search]:focus::placeholder,
     float: none;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 30%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -864,6 +869,12 @@ body:not(.page-template-template-fullwidth) .col-full {
   padding: 2% 0;
 }
 
+@media (max-width: 767px) {
+  body:not(.page-template-template-fullwidth) .site-header .col-full {
+    padding: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .woocommerce-products-header {
     float: left;
@@ -874,6 +885,18 @@ body:not(.page-template-template-fullwidth) .col-full {
 
 .woocommerce-products-header h1 {
   display: none;
+}
+
+ul.products li.product .woocommerce-LoopProduct-link h3, ul.products li.product span.price {
+  display: none !important;
+}
+
+body.single p .woocommerce-Price-amount {
+  font-size: 14px;
+}
+
+.product-price-tickr {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 767px) {
@@ -1093,10 +1116,6 @@ ul.products.grid li.product {
 
 ul.products.grid .woocommerce-loop-product__title {
   color: #595757;
-}
-
-ul.products.grid .gridlist-buttonwrap {
-  display: none;
 }
 
 ul.products.grid li.product {
@@ -1497,6 +1516,12 @@ body.post-template-default .entry-content,
 body.single .hentry.type-post .entry-content, body.single .entry-content {
   background: #f0f0f0;
   padding: 2em;
+}
+
+body.post-template-default.single-product .hentry.type-post .entry-content,
+body.post-template-default.single-product .entry-content,
+body.single.single-product .hentry.type-post .entry-content, body.single.single-product .entry-content {
+  padding: 2em 1em;
 }
 
 body.post-template-default .hentry .wp-post-image,
@@ -2004,8 +2029,8 @@ body.search-results .entry-content .wp-post-image {
   }
 }
 
-.onsale, .wc-points-rewards-product-message, p.price, .cart {
-  display: none;
+.single-product div.product p.price {
+  margin: 6px 0;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

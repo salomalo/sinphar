@@ -119,7 +119,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				echo apply_filters( 'gridlist_button_wrap_start', '<div class="gridlist-buttonwrap">' );
 			}
 			function gridlist_buttonwrap_close() {
-				echo apply_filters( 'gridlist_button_wrap_end', '</div>' );
+				echo apply_filters( 'gridlist_button_wrap_end', '</div></div>' );
 			}
 
 			// hr

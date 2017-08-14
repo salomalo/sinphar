@@ -83,6 +83,10 @@ input[type="submit"]{
 		color: $blue;
 	}
 }
+button.alt{
+	background: $blue!important;
+	border-color: $blue!important;
+}
 // header: ;
 .main-navigation ul li a{
 	color: $blue;
@@ -343,7 +347,7 @@ input[type=search]:focus,
 		float: none;
 		position: absolute;
 		left: 50%;
-    top: 35%;
+    top: 30%;
     transform: translate(-50%, -50%);
     padding: 0;
 	}
@@ -737,8 +741,17 @@ body.page-template-template-fullwidth .site-content{
 }
 
 // product list page
-body:not(.page-template-template-fullwidth) .col-full{
-	padding: 2% 0;
+body:not(.page-template-template-fullwidth) {
+	.col-full{
+		padding: 2% 0;
+	}
+	@media (max-width: 767px) {
+		.site-header{
+			.col-full{
+				padding: 0;
+			}
+		}
+	}
 }
 .woocommerce-products-header{
 	@media (min-width: 768px) {
@@ -749,6 +762,18 @@ body:not(.page-template-template-fullwidth) .col-full{
 	h1{
 		display: none;
 	}
+}
+ul.products li.product{
+	.woocommerce-LoopProduct-link h3, span.price{
+		display: none!important;
+	}
+}
+body.single p .woocommerce-Price-amount{
+	font-size: 14px;
+}
+
+.product-price-tickr{
+	margin-bottom: 8px;
 }
 
 @media (max-width: 767px) {
@@ -962,7 +987,7 @@ ul.products{
 		}
 		// 暫時隱藏 chart 的按鈕
 		.gridlist-buttonwrap{
-			display: none;
+			// display: none;
 		}
 		
 		// hover
@@ -1330,6 +1355,11 @@ body.single{
 	.hentry.type-post .entry-content, .entry-content{
 		background: $gray-bg;
 		padding: 2em;
+	}
+	&.single-product{
+		.hentry.type-post .entry-content, .entry-content{
+			padding: 2em 1em;
+		}
 	}
 	.hentry .wp-post-image{
 		margin-left: 0;
@@ -1804,8 +1834,11 @@ body.search-results{
 	}
 }
 
+.single-product div.product p.price{
+	margin: 6px 0;
+}
 
 // 暫時隱藏
-.onsale, .wc-points-rewards-product-message, p.price, .cart{
-	display: none;
-}
+// .onsale, .wc-points-rewards-product-message, p.price, .cart{
+// 	display: none;
+// }

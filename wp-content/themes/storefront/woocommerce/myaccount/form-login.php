@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.left-sidebar .no-sidebar-container.content-area{
 		margin: 0;
 	}
-	body:not(.page-template-template-fullwidth).woocommerce-account .no-sidebar-container.content-area .woocommerce{
+	body:not(.page-template-template-fullwidth).woocommerce-account .hentry, body:not(.page-template-template-fullwidth).woocommerce-account .site-main, body:not(.page-template-template-fullwidth).woocommerce-account .no-sidebar-container.content-area .woocommerce{
 		padding: 0;
 	}
 	@media (max-width: 66.4989378333em){

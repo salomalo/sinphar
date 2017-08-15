@@ -6,6 +6,7 @@ $green: #128043;
 $gray: #3f3b3b;
 $gray-text: #595757;
 $gray-border: #b5b6b6;
+$gray-store-border: #808080;
 $gray-light: #d4d4d5;
 $gray-lighter: #f3f3f3;
 $gray-bg: #f0f0f0;
@@ -30,6 +31,9 @@ a{
 	}
 	&.skip-link{
 		display: none;
+	}
+	&:focus{
+		outline: none;
 	}
 }
 button{
@@ -61,17 +65,21 @@ input[type=text],input[type=email], input[type=password], input[type=search], in
 		border-color: $green;
 	}
 }
-input[type="submit"], .rmagic .buttonarea input[type='button']{
+input[type="submit"], .rmagic .buttonarea input[type='button'], button{
 	background: $blue;
 	color: $white;
 	letter-spacing: 5px;
 	padding: 6px 25px;
 	font-size: 13px;
 	transition: .3s;
+	border-radius: 3px;
 	&:hover{
 		background: $blue;
 		color: $white;
 		opacity: 0.8;
+	}
+	@media (max-width: 767px) {
+		padding: 3px 15px;
 	}
 }
 .hentry .entry-header{
@@ -358,7 +366,7 @@ input[type=search]:focus,
     padding: 0;
 	}
 	.site-header {
-		box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		box-shadow: 0 0 15px rgba(0,0,0,0.5);
 		.custom-logo-link img{
 			max-width: 100px;
 		}
@@ -1900,6 +1908,183 @@ fieldset{
 		border: 1px solid $green!important;
 	}
 }
+
+// 門市
+h3.subtitle{
+	color: $blue;
+	font-size: 15px;
+	font-weight: 400;
+	@media (max-width: 767px) {
+		margin-top: 5%;
+	}
+}
+.store-locator-container{
+	@media (max-width: 767px) {
+		h3{
+			text-align: center;
+		}
+	}
+	.hentry{
+		margin: 0;
+	}
+	
+	select {
+		-webkit-appearance: none; 
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 3px;
+		margin: 0 10px 10px 0;
+	  border: 1px solid $blue;
+	  color: $blue;
+	  width: 180px;
+	  padding: 2px 25px 2px 5px;
+	  font-size: 13px;
+	  height: 33px;
+	  background: url('./images/icon-arrow-bottom.svg') no-repeat 94% center;
+
+		&::-ms-expand { 
+    	display: none;
+		}
+		@media screen and (min-width:0\0) {
+			background-image:none\9;
+     	padding: 5px\9;
+		}
+		@media (max-width: 767px) {
+			display: block;
+			margin: 0 auto 8px;
+		}
+	}
+
+	input[type="submit"]{
+		border-radius: 3px;
+		display: inline-block;
+		@media (max-width: 767px) {
+			display: block;
+			margin: 0 auto 10%;
+		}
+	}
+	.tw-selector{
+		display: inline-block;
+		@media (max-width: 767px) {
+			display: block;
+			margin: 0 auto 12px;
+		}
+	}
+	iframe{
+		width: 100%;
+    border: none;
+		@media (max-width: 767px) {
+			height: 350px;
+		}
+	}
+
+	// list
+	ul{
+		list-style: none;
+		margin: 0;
+	}
+	.store-table-title, .store-table-content{
+		ul{
+			margin-bottom: 5px;
+			padding: 3px 0 8px 0;
+			border-bottom: 1px solid $gray-store-border;
+			@media (max-width: 767px) {
+				border: 1px solid $gray-border;
+				padding: 10px 0;
+			}
+		}
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			@media (max-width: 767px) {
+				padding: 0 4%;
+			}
+			&:first-child{
+				width: 14%;
+			}
+			&:nth-child(2){
+				width: 16%;
+			}
+			&:nth-child(3){
+				width: 20%;
+			}
+			&:nth-child(4){
+				width: 32%;
+			}
+			&:nth-child(5){
+				width: 8%;
+			}
+			@media (max-width: 767px) {
+				&.store-title, &.store-number{
+					width: 48%;
+					display: inline-block;
+					min-height: 2px;
+					color: $blue;
+				}
+				&.store-title{
+					font-size: 18px;
+				}
+				&.store-number{
+					text-align: right;
+					color: $gray-text;
+				}
+				&.store-phone, &.store-address, &.store-map{
+					display: block;
+					width: 100%;
+					color: $blue;
+					font-size: 15px;
+				}
+				&.store-phone{
+					&:before{
+						background: $gray-border;
+						display: block;
+						width: 100%;
+						height: 1px;
+						content: '';
+						margin: 10px 0;
+					}
+				}
+				&.store-map{
+					text-align: right;
+					margin: 10px 0;
+					padding: 0;
+					&.center{
+						text-align: center;
+					}
+					@media (max-width: 767px) {
+						margin: 10px 4% 10px 0;
+						width: 96%;
+					}
+				}
+			}
+		}
+	}
+	.store-table-title{
+		font-size: 15px;
+		color: $blue;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	.store-table-content{
+		color: $gray-text;
+		font-size: 13px;
+	}
+
+	.pagination{
+		border: none;
+		li{
+			display: inline-block;
+			padding: 0 5px;
+			&.active{
+				text-decoration: underline;
+				color: $green;
+			}
+		}
+	}
+}
+
+
 
 // 暫時隱藏
 .onsale, .up-sells.upsells{

@@ -26,8 +26,9 @@ get_header(); ?>
 	$google_map_api_key = 'AIzaSyAZeiklDV11AJeUgqzCYaNvqGMtCo7KlWQ';
  ?>
 
-	<div id="primary" class="content-area no-sidebar-container">
+	<div id="primary" class="content-area no-sidebar-container store-locator-container">
 		<main id="main" class="site-main" role="main">
+			<h3 class="subtitle">請輸入您希望查詢的杏輝專櫃門市區域：</h3>
 
 			<?php while ( have_posts() ) : the_post();
 
@@ -41,30 +42,27 @@ get_header(); ?>
 			<?php if (empty($locations)): ?>
 				<input type="hidden" name="pages" value="1">
 			<?php endif ?>
-				<input type="submit">
+				<input type="submit" value="查詢">
 			</form>
 
 		<?php if (!empty($locations)): ?>
-			<table>
-			<thead>
-				<tr>
-					<th>No</th>
-					<th>藥局名稱</th>
-					<th>藥局編號</th>
-					<th>電話</th>
-					<th>地址</th>
-					<th>地圖</th>
-				</tr>
-			</thead>
-			<tbody>
-			<?php foreach ($locations as $key => $local): ?>
-				<tr>
-					<td><?php echo $key + 1; ?></td>
-					<td><?php echo $local->title; ?></td>
-					<td><?php echo '00'; ?></td>
-					<td><?php echo $local->phone; ?></td>
-					<td><?php echo $local->city . $local->address_1; ?></td>
-					<td>
+			<div class="store-table-title">
+				<ul>
+					<li>藥局名稱</li>
+					<li>藥局編號</li>
+					<li>電話</li>
+					<li>地址</li>
+					<li>地圖</li>
+				</ul>
+			</div>
+			<div class="store-table-content">
+				<?php foreach ($locations as $key => $local): ?>
+				<ul>
+					<li class="store-title"><?php echo $local->title; ?></li>
+					<li class="store-number"><?php echo $local->description; ?></li>
+					<li class="store-phone"><?php echo $local->phone; ?></li>
+					<li class="store-address"><?php echo $local->city . $local->address_1; ?></li>
+					<li class="store-map">
 					<?php if (empty(wp_is_mobile())): ?>
 						<button onclick="openMap('<?php echo $local->city . $local->address_1; ?>')">MAP</button>
 					<?php else: ?>
@@ -74,11 +72,10 @@ get_header(); ?>
 							<button style="display: none;" class="mobile-map-off">返回</button>
 						</div>
 					<?php endif ?>
-					</td>
-				</tr>
+					</li>
+				</ul>
 			<?php endforeach ?>
-			</tbody>
-			</table>
+			</div>
 
 			<?php 
 				$queryParams = array();
@@ -148,6 +145,7 @@ get_header(); ?>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$('.mobile-map-on').click(function() {
+			$('.store-map').addClass('center');
 			$(this).hide();
 			var iframeBlock = $(this).closest('div.mobile-map').find('.mobile-map-iframe');
 			var src = 
@@ -160,6 +158,7 @@ get_header(); ?>
 			$(this).closest('div.mobile-map').find('.mobile-map-off').show();
 		});
 		$('.mobile-map-off').click(function() {
+			$('.store-map').removeClass('center');
 			$(this).hide();
 			$('.mobile-map-iframe').find('iframe').remove();
 			$(this).closest('div.mobile-map').find('.mobile-map-on').show();

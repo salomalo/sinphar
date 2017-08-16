@@ -1830,8 +1830,9 @@ body.home .btn-search {
     font-size: 13px;
   }
   .site-header.header-home .header-top .user-btns-group {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    padding: 2px 0 3px;
+    display: block;
+    margin: 0 auto;
   }
   .site-header.header-home .site-branding, .site-header.header-home .storefront-primary-navigation {
     display: inline-block;

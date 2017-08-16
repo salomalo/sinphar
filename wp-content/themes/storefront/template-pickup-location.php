@@ -24,7 +24,7 @@ get_header(); ?>
 	$totalQuery = 'SELECT COUNT(pl.post_id) AS `count` FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl WHERE ' . $conditions;
 	$total = $wpdb->get_results($totalQuery);
 
-	$google_map_api_key = 'AIzaSyAZeiklDV11AJeUgqzCYaNvqGMtCo7KlWQ';
+	$google_map_api_key = 'AIzaSyCQYajdTcUkA69UT6MJ1tCRwHY4VJQcPz0';
  ?>
 
 	<div id="primary" class="content-area no-sidebar-container store-locator-container">
@@ -62,7 +62,7 @@ get_header(); ?>
 					<li class="store-title"><?php echo $local->title; ?></li>
 					<li class="store-number"><?php echo $local->description; ?></li>
 					<li class="store-phone"><?php echo $local->phone; ?></li>
-					<li class="store-address"><?php echo $local->city . $local->address_1; ?></li>
+					<li class="store-address"><?php echo $local->address_1; ?></li>
 					<li class="store-map">
 					<?php if (empty(wp_is_mobile())): ?>
 						<button onclick="openMap('<?php echo $local->city . $local->address_1; ?>')">MAP</button>

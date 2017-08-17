@@ -299,7 +299,7 @@ input[type=search]:focus,
 	background: transparent;
 	border: 1px solid $blue;
 	box-shadow: none;
-	padding: 6px;
+	padding: 4px 6px;
 	border-radius: 3px;
 	&::placeholder{
 		color: $white;
@@ -323,7 +323,8 @@ input[type=search]:focus,
 
 .site-search .widget_product_search form:before,
 .aws-container .aws-search-form:before,
-.search-form label:before{
+.search-form label:before,
+.woocommerce-product-search:before{
 	top: 50%;
 	transform: translate(0, -50%);
 	left: inherit;
@@ -799,6 +800,40 @@ body.single p .woocommerce-Price-amount{
 	margin-bottom: 8px;
 }
 
+.site-main .woocommerce-product-search{
+	position: relative;
+	min-width: 200px;
+	@media (min-width: 768px) {
+		margin: 4px 0 0 0;
+		float: left;
+	}
+	@media (max-width: 767px) {
+		max-width: 80%;
+		margin: 15px auto 6px;
+  	clear: both;
+    overflow: hidden;
+	}
+	input[type=search]{
+		padding: 1px 6px;
+		float: left;
+		@media (min-width: 768px) {
+			float: none;
+		}
+		&::placeholder{
+			color: $blue;
+			font-size: 13px;
+		}
+		&:after{
+			display: inline-block;
+			content: '';
+		}
+	}
+	input[type="submit"]{
+		float: left;
+		display: none;
+	}
+}
+
 @media (max-width: 767px) {
 	.woocommerce-products-header,
 	.storefront-sorting{
@@ -956,7 +991,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting{
 }
 
 .woocommerce-ordering {
-	background: url('./images/icon-arrow-bottom.svg') no-repeat 94% center;
+	background: url('./images/icon-arrow-bottom.svg') no-repeat 96% center;
 	overflow: hidden;
 	border: 1px solid $blue;
 	padding: 2px 5px;
@@ -965,6 +1000,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting{
 	width: 100%;
 	@media (min-width: 768px) {
 		width: 148px;
+		background: url('./images/icon-arrow-bottom.svg') no-repeat 94% center;
 	}
 	select{
 		background: transparent;
@@ -1436,6 +1472,7 @@ body.single{
 		font-weight: 400;
 	}
 	h1{
+		letter-spacing: 10px;
 		font-size: 44px;
 	}
 	h2{
@@ -1735,6 +1772,11 @@ body.single .entry-content{
 }
 
 // contact
+.contact{
+	.left-title-group{
+		max-width: 50%;
+	}
+}
 .wpcf7-form{
 	margin: 0 auto;
 }

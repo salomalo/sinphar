@@ -325,7 +325,7 @@ input[type=search]:focus,
   background: transparent;
   border: 1px solid #11337d;
   box-shadow: none;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 3px;
 }
 
@@ -374,7 +374,8 @@ input[type=search]:focus::placeholder,
 
 .site-search .widget_product_search form:before,
 .aws-container .aws-search-form:before,
-.search-form label:before {
+.search-form label:before,
+.woocommerce-product-search:before {
   top: 50%;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
@@ -926,6 +927,68 @@ body.single p .woocommerce-Price-amount {
   margin-bottom: 8px;
 }
 
+.site-main .woocommerce-product-search {
+  position: relative;
+  min-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .site-main .woocommerce-product-search {
+    margin: 4px 0 0 0;
+    float: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-main .woocommerce-product-search {
+    max-width: 80%;
+    margin: 15px auto 6px;
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+.site-main .woocommerce-product-search input[type=search] {
+  padding: 1px 6px;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .site-main .woocommerce-product-search input[type=search] {
+    float: none;
+  }
+}
+
+.site-main .woocommerce-product-search input[type=search]::-webkit-input-placeholder {
+  color: #11337d;
+  font-size: 13px;
+}
+
+.site-main .woocommerce-product-search input[type=search]::-moz-placeholder {
+  color: #11337d;
+  font-size: 13px;
+}
+
+.site-main .woocommerce-product-search input[type=search]:-ms-input-placeholder {
+  color: #11337d;
+  font-size: 13px;
+}
+
+.site-main .woocommerce-product-search input[type=search]::placeholder {
+  color: #11337d;
+  font-size: 13px;
+}
+
+.site-main .woocommerce-product-search input[type=search]:after {
+  display: inline-block;
+  content: '';
+}
+
+.site-main .woocommerce-product-search input[type="submit"] {
+  float: left;
+  display: none;
+}
+
 @media (max-width: 767px) {
   .woocommerce-products-header,
   .storefront-sorting {
@@ -1087,7 +1150,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting {
 }
 
 .woocommerce-ordering {
-  background: url("./images/icon-arrow-bottom.svg") no-repeat 94% center;
+  background: url("./images/icon-arrow-bottom.svg") no-repeat 96% center;
   overflow: hidden;
   border: 1px solid #11337d;
   padding: 2px 5px;
@@ -1099,6 +1162,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting {
 @media (min-width: 768px) {
   .woocommerce-ordering {
     width: 148px;
+    background: url("./images/icon-arrow-bottom.svg") no-repeat 94% center;
   }
 }
 
@@ -1618,6 +1682,7 @@ body.single p {
 }
 
 .left-title-group h1 {
+  letter-spacing: 10px;
   font-size: 44px;
 }
 
@@ -1915,6 +1980,10 @@ body.single .entry-content {
   font-family: "Noto Sans TC", sans-serif !important;
   min-width: 120px;
   text-align: center !important;
+}
+
+.contact .left-title-group {
+  max-width: 50%;
 }
 
 .wpcf7-form {

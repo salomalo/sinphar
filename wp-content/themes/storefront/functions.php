@@ -70,3 +70,48 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+/** Disable WordPress Search **/
+function fb_filter_query( $query, $error = true ){
+  if ( is_search() ) {
+   $query->is_search = false;
+   $query->query_vars[s] = false;
+   $query->query[s] = false;
+
+  // to error
+  if ( $error == true )
+   $query->is_404 = true;
+
+  }
+}
+add_action( 'parse_query', 'fb_filter_query' );
+add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
+
+
+//  停止 WordPress 猜測網址功能
+add_filter('redirect_canonical', 'stop_guessing');
+function stop_guessing($url) {
+  if (is_404()) {
+    return false;
+  }
+return $url;
+}
+
+// remove generator
+remove_action( 'wp_head', 'wp_generator' ) ; 
+remove_action( 'wp_head', 'wlwmanifest_link' ) ; 
+remove_action( 'wp_head', 'rsd_link' ) ;
+
+// 停用 WordPress 迴響的 HTML 功能
+add_filter( 'pre_comment_content', 'wp_specialchars' );
+
+// 隱藏其他 WordPress Feeds 網址
+remove_action( 'wp_head', 'feed_links', 2 ); 
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+// 隱藏 WordPress 登入畫面的錯誤訊息
+function no_errors_please(){
+ return 'GET OFF MY LAWN !! RIGHT NOW !!';
+}
+add_filter( 'login_errors', 'no_errors_please' );

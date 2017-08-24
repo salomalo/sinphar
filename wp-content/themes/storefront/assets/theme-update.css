@@ -884,6 +884,10 @@ footer .norm_row {
   margin: 0;
 }
 
+body:not(.home) header > .col-full {
+  padding: 2% 0 0 0;
+}
+
 body:not(.page-template-template-fullwidth) .col-full {
   padding: 2% 0;
 }

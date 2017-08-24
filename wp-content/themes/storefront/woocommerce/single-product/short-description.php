@@ -53,14 +53,14 @@ if ( ! $post->post_excerpt ) {
 	<div class="woocommerce-product-details__short-description">
 	    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
 	</div>
-	<a class="btn-blue" href="<?php echo get_site_url().'/store-locator'?>">
+	<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
 		查詢杏輝專櫃門市
 	</a>
 <?php }else{?>
 		<div class="woocommerce-product-details__short-description">
 		    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
 		</div>
-		<a class="btn-blue" href="<?php echo get_site_url().'/store-locator'?>">
+		<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
 			查詢杏輝專櫃門市
 		</a>
 	</div>

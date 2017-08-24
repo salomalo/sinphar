@@ -756,6 +756,11 @@ body.page-template-template-fullwidth .site-content{
 }
 
 // product list page
+body:not(.home) header{
+	> .col-full{
+		padding: 2% 0 0 0;
+	}
+}
 body:not(.page-template-template-fullwidth) {
 	.col-full{
 		padding: 2% 0;

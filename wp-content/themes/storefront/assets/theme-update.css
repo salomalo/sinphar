@@ -32,22 +32,22 @@ button {
 }
 
 h1, h2, .alpha, h2 a {
-  font-size: 25px;
+  font-size: 28px;
   color: #11337d;
   font-weight: 400;
 }
 
 p {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 label {
   color: #11337d;
-  font-size: 15px;
+  font-size: 18px;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice {
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice, input[type="password"] {
   background: transparent;
   border: 1px solid #11337d;
   box-shadow: none;
@@ -58,9 +58,17 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
           transition: .3s;
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus, .input-text:focus, .select2-container .select2-choice:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus, .input-text:focus, .select2-container .select2-choice:focus, input[type="password"]:focus {
   background: transparent;
   border-color: #128043;
+}
+
+input[type="password"] {
+  border: 1px solid #11337d !important;
+}
+
+input[type="password"]:focus {
+  border-color: #128043 !important;
 }
 
 input[type="submit"], .rmagic .buttonarea input[type='button'], button {
@@ -68,7 +76,7 @@ input[type="submit"], .rmagic .buttonarea input[type='button'], button {
   color: #fff;
   letter-spacing: 5px;
   padding: 6px 25px;
-  font-size: 13px;
+  font-size: 16px;
   -webkit-transition: .3s;
           transition: .3s;
   border-radius: 3px;
@@ -190,6 +198,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
     padding: 1em 0;
     display: block;
     width: 100%;
+    font-size: 17px;
   }
   .main-navigation ul.nav-menu ul.sub-menu > li > a {
     padding: 1em 0.8em;
@@ -261,10 +270,10 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  font-size: 10px;
+  font-size: 13px;
   display: inline-block;
   text-align: center;
-  line-height: 16px;
+  line-height: 19px;
   position: absolute;
   right: -10px;
   top: 10px;
@@ -410,25 +419,25 @@ input[type=search]:focus::placeholder,
 .aws-container .aws-search-field::-webkit-input-placeholder {
   color: #11337d;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .aws-container .aws-search-field::-moz-placeholder {
   color: #11337d;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .aws-container .aws-search-field:-ms-input-placeholder {
   color: #11337d;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .aws-container .aws-search-field::placeholder {
   color: #11337d;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 @media (max-width: 767px) {
@@ -577,7 +586,7 @@ footer .footer-widgets {
 
 footer .footer-widgets p {
   padding-top: 15px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 footer .site-info {
@@ -651,20 +660,20 @@ footer .norm_row {
   text-align: center;
   padding: 15px 0;
   letter-spacing: 10px;
-  font-size: 40px;
+  font-size: 43px;
   font-weight: 400;
 }
 
 @media (max-width: 767px) {
   .page-main-title {
-    font-size: 32px;
+    font-size: 35px;
     letter-spacing: 6px;
     max-width: 240px;
   }
 }
 
 .page-main-subtitle {
-  font-size: 15px;
+  font-size: 18px;
   color: #11337d;
   letter-spacing: 14px;
 }
@@ -672,7 +681,7 @@ footer .norm_row {
 @media (max-width: 767px) {
   .page-main-subtitle {
     letter-spacing: 10px;
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
@@ -686,7 +695,7 @@ footer .norm_row {
   max-width: 745px;
   margin: 0 auto;
   color: #595757;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 2px;
 }
 
@@ -745,25 +754,25 @@ footer .norm_row {
 }
 
 .three-column-container p {
-  font-size: 13px;
+  font-size: 16px;
   color: #3f3b3b;
 }
 
 @media (max-width: 767px) {
   .three-column-container p {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
 .three-column-container h3 {
   color: #11337d;
-  font-size: 33px;
+  font-size: 36px;
   letter-spacing: 2px;
 }
 
 @media (max-width: 767px) {
   .three-column-container h3 {
-    font-size: 25px;
+    font-size: 28px;
   }
 }
 
@@ -818,7 +827,7 @@ footer .norm_row {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
-  bottom: -82%;
+  bottom: -78%;
   left: 0;
   display: inline-block;
   content: "";
@@ -851,7 +860,7 @@ footer .norm_row {
 
 .three-columns-hover-container h3 {
   color: #11337d;
-  font-size: 15px;
+  font-size: 18px;
   margin: 0;
   position: absolute;
   bottom: 0;
@@ -889,6 +898,10 @@ body:not(.home) header > .col-full {
 }
 
 body:not(.page-template-template-fullwidth) .col-full {
+  padding: 4% 0;
+}
+
+body:not(.page-template-template-fullwidth) footer .col-full {
   padding: 2% 0;
 }
 
@@ -924,7 +937,7 @@ ul.products li.product .woocommerce-LoopProduct-link h3, ul.products li.product 
 }
 
 body.single p .woocommerce-Price-amount {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .product-price-tickr {
@@ -965,22 +978,22 @@ body.single p .woocommerce-Price-amount {
 
 .site-main .woocommerce-product-search input[type=search]::-webkit-input-placeholder {
   color: #11337d;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .site-main .woocommerce-product-search input[type=search]::-moz-placeholder {
   color: #11337d;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .site-main .woocommerce-product-search input[type=search]:-ms-input-placeholder {
   color: #11337d;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .site-main .woocommerce-product-search input[type=search]::placeholder {
   color: #11337d;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .site-main .woocommerce-product-search input[type=search]:after {
@@ -1010,7 +1023,7 @@ body.single p .woocommerce-Price-amount {
 body.woocommerce-page .widget-area .widget-title {
   border: none;
   color: #11337d;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 400;
   letter-spacing: 5px;
   padding: 0 0 0.3em;
@@ -1175,7 +1188,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting {
   border: none;
   width: 110%;
   color: #11337d;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 3px;
 }
 
@@ -1251,7 +1264,7 @@ ul.products.grid li.product .button {
   color: #fff;
   width: 100%;
   padding: 4px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
 }
 
@@ -1294,7 +1307,7 @@ ul.products.list li.product .price {
 }
 
 ul.products.list li.product .woocommerce-loop-product__title {
-  font-size: 24px;
+  font-size: 27px;
 }
 
 ul.products.list li.product a:hover .woocommerce-loop-product__title {
@@ -1344,7 +1357,7 @@ ul.products.list a.btn-blue {
   color: #fff;
   padding: 4px;
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   font-weight: normal;
 }
@@ -1383,7 +1396,7 @@ ul.products.list a.btn-blue {
 
 .left-sidebar #page.healthy .widget-title {
   color: #11337d;
-  font-size: 16px;
+  font-size: 19px;
   letter-spacing: 3px;
   border: none;
   font-weight: 400;
@@ -1403,13 +1416,14 @@ ul.products.list a.btn-blue {
   color: #11337d;
   display: block;
   float: left;
-  width: 40px;
-  height: 40px;
-  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
   border: 1px solid #11337d;
   text-align: center;
   margin-right: 5px;
   line-height: 1.2;
+  font-weight: normal;
 }
 
 .left-sidebar #page.healthy .popular-posts li, .left-sidebar #page.healthy .widget_recent_entries li {
@@ -1421,9 +1435,9 @@ ul.products.list a.btn-blue {
   margin-top: 5px;
   display: block;
   float: right;
-  margin-top: 10px;
-  width: -webkit-calc(100% - 47px);
-  width: calc(100% - 47px);
+  margin-top: 15px;
+  width: -webkit-calc(100% - 57px);
+  width: calc(100% - 57px);
 }
 
 @media (min-width: 768px) {
@@ -1442,7 +1456,7 @@ ul.products.list a.btn-blue {
 }
 
 .left-sidebar #page.healthy .widget_categories a {
-  font-size: 16px;
+  font-size: 18px;
   color: #11337d;
   padding: 6px 0;
   display: inline-block;
@@ -1476,7 +1490,7 @@ ul.products.list a.btn-blue {
 .healthy .vc_gitem-post-category-name a,
 .healthy .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item a {
   color: #595757;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .healthy .vc_gitem-post-data-source-post_title {
@@ -1485,7 +1499,7 @@ ul.products.list a.btn-blue {
 
 .healthy .vc_gitem-post-data-source-post_title h2 {
   color: #11337d;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -1504,11 +1518,11 @@ ul.products.list a.btn-blue {
 
 .post-date-author > div {
   display: inline-block;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .vc_gitem-post-data-source-post_excerpt {
-  font-size: 15px;
+  font-size: 18px;
   color: #3f3b3b;
 }
 
@@ -1597,13 +1611,13 @@ body.post-template-default h1,
 body.post-template-default h2.product-subtitle,
 body.single h1, body.single h2.product-subtitle {
   color: #11337d;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 400;
 }
 
 body.post-template-default h2.product-subtitle,
 body.single h2.product-subtitle {
-  font-size: 13px;
+  font-size: 18px;
 }
 
 body.post-template-default .hentry.type-post .entry-content,
@@ -1628,7 +1642,7 @@ body.single .hentry .wp-post-image {
 body.post-template-default p,
 body.single p {
   color: #595757;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .site-main nav.navigation, .site-main nav.navigation, .site-main nav.navigation {
@@ -1646,7 +1660,7 @@ body.single p {
   background: #11337d;
   color: #fff;
   border-radius: 0;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 3px;
 }
 
@@ -1687,11 +1701,11 @@ body.single p {
 
 .left-title-group h1 {
   letter-spacing: 10px;
-  font-size: 44px;
+  font-size: 47px;
 }
 
 .left-title-group h2 {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .container,
@@ -1740,7 +1754,7 @@ body.woocommerce-account .no-sidebar-container {
 }
 
 .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body p {
-  font-size: 15px;
+  font-size: 18px;
   color: #595757;
 }
 
@@ -1780,7 +1794,7 @@ body.woocommerce-account .no-sidebar-container {
 
 .title-post .vc_custom_heading a {
   color: #11337d;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -1825,7 +1839,7 @@ body.search-results .entry-content .post-btn-group {
 
 .top-post-data .wpb_content_element p, .top-post-data .vc_gitem-post-data p {
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .news-top-section {
@@ -1896,7 +1910,7 @@ body.home .btn-search {
   }
   .site-header.header-home .header-top a {
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
   }
   .site-header.header-home .header-top .user-btns-group {
     padding: 2px 0 3px;
@@ -1965,7 +1979,7 @@ body.single .entry-content {
 }
 
 .product-box-section p {
-  font-size: 15px;
+  font-size: 18px;
   color: #3f3b3b;
 }
 
@@ -1977,7 +1991,7 @@ body.single .entry-content {
   background: #128043;
   color: #fff;
   display: inline-block;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 5px;
   padding: 5px 15px;
   margin: 0 0 15px;
@@ -1996,7 +2010,7 @@ body.single .entry-content {
 
 @media (min-width: 768px) {
   .contact-form-container {
-    max-width: 320px;
+    max-width: 350px;
   }
 }
 
@@ -2069,7 +2083,7 @@ body.search-results .entry-content .wp-post-image {
 
 .my-account .l-login-form p, .my-account .r-register-form p {
   color: #11337d;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -2125,7 +2139,7 @@ body.search-results .entry-content .wp-post-image {
   color: #fff;
   padding: 6px 15px;
   letter-spacing: 5px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .my-account .l-login-form .register-content, .my-account .r-register-form .register-content {
@@ -2134,7 +2148,7 @@ body.search-results .entry-content .wp-post-image {
 
 .my-account .l-login-form .register-content .btn-blue, .my-account .r-register-form .register-content .btn-blue {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   padding: 6px 25px;
   font-weight: 400;
   margin-top: 12%;
@@ -2190,7 +2204,7 @@ fieldset {
 
 h3.subtitle {
   color: #11337d;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -2220,7 +2234,7 @@ h3.subtitle {
   color: #11337d;
   width: 180px;
   padding: 2px 25px 2px 5px;
-  font-size: 13px;
+  font-size: 16px;
   height: 33px;
   background: url("./images/icon-arrow-bottom.svg") no-repeat 94% center;
 }
@@ -2334,7 +2348,7 @@ h3.subtitle {
     color: #11337d;
   }
   .store-locator-container .store-table-title li.store-title, .store-locator-container .store-table-content li.store-title {
-    font-size: 18px;
+    font-size: 21px;
   }
   .store-locator-container .store-table-title li.store-number, .store-locator-container .store-table-content li.store-number {
     text-align: right;
@@ -2344,7 +2358,7 @@ h3.subtitle {
     display: block;
     width: 100%;
     color: #11337d;
-    font-size: 15px;
+    font-size: 18px;
   }
   .store-locator-container .store-table-title li.store-phone:before, .store-locator-container .store-table-content li.store-phone:before {
     background: #b5b6b6;
@@ -2372,7 +2386,7 @@ h3.subtitle {
 }
 
 .store-locator-container .store-table-title {
-  font-size: 15px;
+  font-size: 18px;
   color: #11337d;
 }
 
@@ -2384,7 +2398,7 @@ h3.subtitle {
 
 .store-locator-container .store-table-content {
   color: #595757;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .store-locator-container .pagination {
@@ -2399,6 +2413,24 @@ h3.subtitle {
 .store-locator-container .pagination li.active {
   text-decoration: underline;
   color: #128043;
+}
+
+table.cart td.actions .coupon {
+  margin-bottom: 15px;
+}
+
+.rmradio {
+  list-style: none;
+  margin: 0;
+  text-align: left;
+}
+
+.rmradio li {
+  display: inline-block;
+}
+
+.rmagic .rmrow .rminput input[type="number"] {
+  padding-left: .5em;
 }
 
 .onsale, .up-sells.upsells {

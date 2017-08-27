@@ -40,19 +40,19 @@ button{
 	outline: none;
 }
 h1, h2, .alpha, h2 a{
-	font-size: 25px;
+	font-size: 28px;
 	color: $blue;
 	font-weight: 400;
 }
 p{
-	font-size: 15px;
-	line-height: 25px;
+	font-size: 18px;
+	line-height: 28px;
 }
 label{
 	color: $blue;
-	font-size: 15px;
+	font-size: 18px;
 }
-input[type=text],input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice{
+input[type=text],input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea, .input-text, .select2-container .select2-choice, input[type="password"]{
 	background: transparent;
 	border: 1px solid $blue;
 	box-shadow: none;
@@ -65,12 +65,18 @@ input[type=text],input[type=email], input[type=password], input[type=search], in
 		border-color: $green;
 	}
 }
+input[type="password"]{
+	border: 1px solid $blue!important;
+	&:focus{
+		border-color: $green!important;
+	}
+}
 input[type="submit"], .rmagic .buttonarea input[type='button'], button{
 	background: $blue;
 	color: $white;
 	letter-spacing: 5px;
 	padding: 6px 25px;
-	font-size: 13px;
+	font-size: 16px;
 	transition: .3s;
 	border-radius: 3px;
 	&:hover{
@@ -169,6 +175,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 		padding: 1em 0;
 		display: block;
     width: 100%;
+    font-size: 17px;
 	}
 	.main-navigation ul.nav-menu ul.sub-menu>li{
 		> a{
@@ -249,10 +256,10 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 		border-radius: 50%;
 		width: 16px;
 		height: 16px;
-		font-size: 10px;
+		font-size: 13px;
 		display: inline-block;
 		text-align: center;
-		line-height: 16px;
+		line-height: 19px;
 		position: absolute;
 		right: -10px;
 		top: 10px;
@@ -350,7 +357,7 @@ input[type=search]:focus,
 	&::placeholder{
 		color: $blue;
 		letter-spacing: 3px;
-		font-size: 13px;
+		font-size: 16px;
 	}
 	&:after{
 
@@ -497,7 +504,7 @@ footer{
 		padding-top: 2%;
 		p{
 			padding-top: 15px;
-			font-size: 12px;
+			font-size: 15px;
 		}
 	}
 	.site-info{
@@ -566,21 +573,21 @@ body.page-template-template-fullwidth .site-content{
 	text-align: center;
 	padding: 15px 0;
 	letter-spacing: 10px;
-	font-size: 40px;
+	font-size: 43px;
 	font-weight: 400;
 	@media (max-width: 767px) {
-		font-size: 32px;
+		font-size: 35px;
 		letter-spacing: 6px;
 		max-width: 240px;
 	}
 }
 .page-main-subtitle{
-	font-size: 15px;
+	font-size: 18px;
 	color: $blue;
 	letter-spacing: 14px;
 	@media (max-width: 767px) {
 		letter-spacing: 10px;
-		font-size: 12px;
+		font-size: 15px;
 	}
 }
 
@@ -596,7 +603,7 @@ body.page-template-template-fullwidth .site-content{
 	max-width: 745px;
 	margin: 0 auto;
 	color: $gray-text;
-	font-size: 15px;
+	font-size: 18px;
 	letter-spacing: 2px;
 	@media (max-width: 767px) {
 		max-width: 310px;
@@ -641,18 +648,18 @@ body.page-template-template-fullwidth .site-content{
 		}
 	}
 	p{
-		font-size: 13px;
+		font-size: 16px;
 		color: $gray;
 		@media (max-width: 767px) {
-			font-size: 15px;
+			font-size: 18px;
 		}
 	}
 	h3{
 		color: $blue;
-		font-size: 33px;
+		font-size: 36px;
 		letter-spacing: 2px;
 		@media (max-width: 767px) {
-			font-size: 25px;
+			font-size: 28px;
 		}
 	}
 }
@@ -700,7 +707,7 @@ body.page-template-template-fullwidth .site-content{
 			height: 100%;
 			background: rgba(255,255,255,0.8);
 			position: absolute;
-			bottom: -82%;
+			bottom: -78%;
 			left: 0;
 			display: inline-block;
 			content: "";
@@ -722,7 +729,7 @@ body.page-template-template-fullwidth .site-content{
 	}
 	h3{
 		color: $blue;
-		font-size: 15px;
+		font-size: 18px;
 		margin: 0;
 		position: absolute;
 		bottom: 0;
@@ -763,6 +770,9 @@ body:not(.home) header{
 }
 body:not(.page-template-template-fullwidth) {
 	.col-full{
+		padding: 4% 0;
+	}
+	footer .col-full{
 		padding: 2% 0;
 	}
 	&.woocommerce-account{
@@ -798,7 +808,7 @@ ul.products li.product{
 	}
 }
 body.single p .woocommerce-Price-amount{
-	font-size: 14px;
+	font-size: 17px;
 }
 
 .product-price-tickr{
@@ -826,7 +836,7 @@ body.single p .woocommerce-Price-amount{
 		}
 		&::placeholder{
 			color: $blue;
-			font-size: 13px;
+			font-size: 16px;
 		}
 		&:after{
 			display: inline-block;
@@ -860,7 +870,7 @@ body.woocommerce-page{
 		.widget-title{
 			border: none;
 			color: $blue;
-			font-size: 24px;
+			font-size: 27px;
 			font-weight: 400;
 			letter-spacing: 5px;
 			padding: 0 0 .3em;
@@ -1012,7 +1022,7 @@ p.woocommerce-result-count, .columns-3 > .storefront-sorting{
 		border: none;
 		width: 110%;
 		color: $blue;
-		font-size: 13px;
+		font-size: 16px;
 		letter-spacing: 3px;
 		@media (min-width: 768px) {
 			width: 180px;
@@ -1085,7 +1095,7 @@ ul.products{
 				color: $white;
 				width: 100%;
 				padding: 4px;
-				font-size: 12px;
+				font-size: 15px;
 				font-weight: normal;
 				&:hover{
 					opacity: 0.8;
@@ -1124,7 +1134,7 @@ ul.products{
 				float: none;
 			}
 			.woocommerce-loop-product__title{
-				font-size: 24px;
+				font-size: 27px;
 			}
 			a:hover{
 				.woocommerce-loop-product__title{
@@ -1172,7 +1182,7 @@ ul.products{
 	color: $white;
 	padding: 4px;
 	display: block;
-	font-size: 12px;
+	font-size: 15px;
 	text-align: center;
 	font-weight: normal;
 
@@ -1210,7 +1220,7 @@ ul.products{
 
 			.widget-title{
 				color: $blue;
-				font-size: 16px;
+				font-size: 19px;
 				letter-spacing: 3px;
 				border: none;
 				font-weight: 400;
@@ -1229,13 +1239,14 @@ ul.products{
 				color: $blue;
 				display: block;
 				float: left;
-				width: 40px;
-				height: 40px;
-				font-size: 15px;
+				width: 50px;
+				height: 50px;
+				font-size: 18px;
 				border: 1px solid $blue;
 				text-align: center;
 				margin-right: 5px;
 				line-height: 1.2;
+				font-weight: normal;
 			}
 			
 			.popular-posts, .widget_recent_entries{
@@ -1247,8 +1258,8 @@ ul.products{
 					margin-top: 5px;
 					display: block;
 					float: right;
-					margin-top: 10px;
-					width: calc(100% - 47px);;
+					margin-top: 15px;
+					width: calc(100% - 57px);
 					@media (min-width: 768px) {
 						height: 18px;
 						overflow: hidden;
@@ -1266,7 +1277,7 @@ ul.products{
 
 			.widget_categories{
 				a{
-					font-size: 16px;
+					font-size: 18px;
 					color: $blue;
 					padding: 6px 0;
 					display: inline-block;
@@ -1303,14 +1314,14 @@ ul.products{
 		}
 		a{
 			color: $gray-text;
-			font-size: 12px;
+			font-size: 15px;
 		}
 	}
 	.vc_gitem-post-data-source-post_title{
 		margin: 0;
 		h2{
 			color: $blue;
-			font-size: 25px;
+			font-size: 28px;
 			font-weight: 400;
 			&:after{
 				display: block;
@@ -1328,12 +1339,12 @@ ul.products{
 	text-align: center;
 	> div{
 		display: inline-block;
-		font-size: 12px;
+		font-size: 15px;
 	}
 }
 
 .vc_gitem-post-data-source-post_excerpt{
-	font-size: 15px;
+	font-size: 18px;
 	color: $gray;
 }
 
@@ -1410,11 +1421,11 @@ body.single{
 
 	h1, h2.product-subtitle{
 		color: $blue;
-		font-size: 20px;
+		font-size: 23px;
 		font-weight: 400;
 	}
 	h2.product-subtitle{
-		font-size: 13px;
+		font-size: 18px;
 	}
 	.hentry.type-post .entry-content, .entry-content{
 		background: $gray-bg;
@@ -1432,7 +1443,7 @@ body.single{
 
 	p{
 		color: $gray-text;
-		font-size: 15px;
+		font-size: 18px;
 	}
 }
 
@@ -1447,7 +1458,7 @@ body.single{
 			background: $blue;
 			color: $white;
 			border-radius: 0;
-			font-size: 13px;
+			font-size: 16px;
 			letter-spacing: 3px;
 			&:before,
 			&:after{
@@ -1478,10 +1489,10 @@ body.single{
 	}
 	h1{
 		letter-spacing: 10px;
-		font-size: 44px;
+		font-size: 47px;
 	}
 	h2{
-		font-size: 25px;
+		font-size: 28px;
 	}
 }
 .container,
@@ -1524,7 +1535,7 @@ body.woocommerce-account .no-sidebar-container{
 		padding: 4% 6%!important;
 		border-radius: 0!important;
 		p{
-			font-size: 15px;
+			font-size: 18px;
 			color: $gray-text;
 		}
 	}
@@ -1578,7 +1589,7 @@ body.woocommerce-account .no-sidebar-container{
 // 最新活動
 .title-post .vc_custom_heading a{
 	color: $blue;
-	font-size: 25px;
+	font-size: 28px;
 	font-weight: 400;
 }
 .post-bottom-section,
@@ -1613,7 +1624,7 @@ body.search-results .entry-content{
 		margin: 0!important;
 		p{
 			margin: 0;
-			font-size: 12px;
+			font-size: 15px;
 		}
 	}
 }
@@ -1680,7 +1691,7 @@ body.home{
 			margin-bottom: 10px;
 			a{
 				color: $white;
-				font-size: 13px;
+				font-size: 15px;
 			}
 			.user-btns-group{
 				padding: 2px 0 3px;
@@ -1756,7 +1767,7 @@ body.single .entry-content{
 
 .product-box-section{
 	p{
-		font-size: 15px;
+		font-size: 18px;
 		color: $gray;
 	}
 	.vc_column-inner {
@@ -1767,7 +1778,7 @@ body.single .entry-content{
 	background: $green;
 	color: $white;
 	display: inline-block;
-	font-size: 15px;
+	font-size: 18px;
 	letter-spacing: 5px;
 	padding: 5px 15px;
 	margin: 0 0 15px;
@@ -1787,7 +1798,7 @@ body.single .entry-content{
 }
 .contact-form-container{
 	@media (min-width: 768px) {
-		max-width: 320px;
+		max-width: 350px;
 	}
 	.center-container{
 		text-align: center;
@@ -1858,7 +1869,7 @@ body.search-results{
 		}
 		p{
 			color: $blue;
-			font-size: 15px;
+			font-size: 18px;
 			line-height: 1.2;
 		}
 		h2{
@@ -1896,13 +1907,13 @@ body.search-results{
 			color: $white;
 			padding: 6px 15px;
 			letter-spacing: 5px;
-			font-size: 15px;
+			font-size: 18px;
 		}
 		.register-content{
 			padding-top: 12%;
 			.btn-blue{
 				display: inline-block;
-				font-size: 13px;
+				font-size: 16px;
 				padding: 6px 25px;
 				font-weight: 400;
 				margin-top: 12%;
@@ -1960,7 +1971,7 @@ fieldset{
 // 門市
 h3.subtitle{
 	color: $blue;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 400;
 	@media (max-width: 767px) {
 		margin-top: 5%;
@@ -1986,7 +1997,7 @@ h3.subtitle{
 	  color: $blue;
 	  width: 180px;
 	  padding: 2px 25px 2px 5px;
-	  font-size: 13px;
+	  font-size: 16px;
 	  height: 33px;
 	  background: url('./images/icon-arrow-bottom.svg') no-repeat 94% center;
 
@@ -2070,7 +2081,7 @@ h3.subtitle{
 					color: $blue;
 				}
 				&.store-title{
-					font-size: 18px;
+					font-size: 21px;
 				}
 				&.store-number{
 					text-align: right;
@@ -2080,7 +2091,7 @@ h3.subtitle{
 					display: block;
 					width: 100%;
 					color: $blue;
-					font-size: 15px;
+					font-size: 18px;
 				}
 				&.store-phone{
 					&:before{
@@ -2108,7 +2119,7 @@ h3.subtitle{
 		}
 	}
 	.store-table-title{
-		font-size: 15px;
+		font-size: 18px;
 		color: $blue;
 		@media (max-width: 767px) {
 			display: none;
@@ -2116,7 +2127,7 @@ h3.subtitle{
 	}
 	.store-table-content{
 		color: $gray-text;
-		font-size: 13px;
+		font-size: 16px;
 	}
 
 	.pagination{
@@ -2132,7 +2143,21 @@ h3.subtitle{
 	}
 }
 
+table.cart td.actions .coupon{
+	margin-bottom: 15px;
+}
 
+.rmradio{
+	list-style: none;
+	margin: 0;
+	text-align: left;
+	li{
+		display: inline-block;
+	}
+}
+.rmagic .rmrow .rminput input[type="number"]{
+	padding-left: .5em;
+}
 
 // 暫時隱藏
 .onsale, .up-sells.upsells{

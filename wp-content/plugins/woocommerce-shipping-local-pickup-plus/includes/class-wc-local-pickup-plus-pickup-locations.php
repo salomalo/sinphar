@@ -312,12 +312,15 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		$postcode     = $address->get_postcode();
 		$table        = $wpdb->prefix . 'woocommerce_pickup_locations_geodata';
 
+		$title = $city;
+
 		if ( '' === $country ) {
 			$query = "
 				SELECT post_id
 				FROM {$table}
 				WHERE city LIKE %s 
 				OR postcode LIKE %s
+				OR title LIKE %s
 				ORDER BY postcode
 			";
 		} else {
@@ -326,7 +329,7 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 				FROM {$table}
 				WHERE country = %s
 				AND state = %s
-				AND ( city LIKE %s OR postcode LIKE %s )
+				AND ( city LIKE %s OR postcode LIKE %s OR title LIKE %s )
 				ORDER BY postcode
 			";
 		}
@@ -338,9 +341,9 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		}
 
 		if ( '' === $country ) {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%", "%{$title}%" ), ARRAY_A );
 		} else {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%", "%{$title}%" ), ARRAY_A );
 		}
 
 		if ( ! empty( $results ) ) {

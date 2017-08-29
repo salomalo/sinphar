@@ -12,7 +12,8 @@ get_header(); ?>
 <?php 
 	$limit = 20;
 	$offset = empty($_GET['pages']) ? 0 : ((int)$_GET['pages'] - 1) * $limit;
-	$conditions = 'pl.city = "' . $_GET['country'] . '" AND pl.address_1 LIKE "%' . $_GET['district'] . '%"';
+	$conditions = 'pl.city = "' . $_GET['country'] . '"';
+	$conditions .= empty($_GET['district']) ? '' : ' AND pl.address_1 LIKE "%' . $_GET['district'] . '%"';
 	$queryString = 'SELECT pl.*, pm.meta_value AS `phone`, pt.post_content AS `description`
 		FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl 
 		INNER JOIN `' . $wpdb->base_prefix . 'postmeta` pm ON pm.post_id = pl.post_id AND pm.meta_key = "_pickup_location_phone" 
@@ -25,6 +26,8 @@ get_header(); ?>
 	$total = $wpdb->get_results($totalQuery);
 
 	$google_map_api_key = 'AIzaSyCQYajdTcUkA69UT6MJ1tCRwHY4VJQcPz0';
+
+	$isMobile = wp_is_mobile() ? true : false;
  ?>
 
 	<div id="primary" class="content-area no-sidebar-container store-locator-container">
@@ -64,7 +67,7 @@ get_header(); ?>
 					<li class="store-phone"><?php echo $local->phone; ?></li>
 					<li class="store-address"><?php echo $local->address_1; ?></li>
 					<li class="store-map">
-					<?php if (empty(wp_is_mobile())): ?>
+					<?php if (empty($isMobile)): ?>
 						<button onclick="openMap('<?php echo $local->city . $local->address_1; ?>')">MAP</button>
 					<?php else: ?>
 						<div class="mobile-map">
@@ -129,7 +132,7 @@ get_header(); ?>
 		el: ".tw-selector" // 同 DOM querySelector()
 	});
 </script>
-<?php if (empty(wp_is_mobile())): ?>
+<?php if (empty($isMobile)): ?>
 <script type="text/javascript">
 	var openMap = function(place) {
 		window.open (

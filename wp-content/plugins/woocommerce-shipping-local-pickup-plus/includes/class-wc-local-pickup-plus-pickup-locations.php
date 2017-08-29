@@ -313,6 +313,7 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		$table        = $wpdb->prefix . 'woocommerce_pickup_locations_geodata';
 
 		$title = $city;
+		$address_1 = $city;
 
 		if ( '' === $country ) {
 			$query = "
@@ -321,6 +322,7 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 				WHERE city LIKE %s 
 				OR postcode LIKE %s
 				OR title LIKE %s
+				OR address_1 LIKE %s
 				ORDER BY postcode
 			";
 		} else {
@@ -329,7 +331,7 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 				FROM {$table}
 				WHERE country = %s
 				AND state = %s
-				AND ( city LIKE %s OR postcode LIKE %s OR title LIKE %s )
+				AND ( city LIKE %s OR postcode LIKE %s OR title LIKE %s OR address_1 LIKE %s )
 				ORDER BY postcode
 			";
 		}
@@ -341,9 +343,9 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		}
 
 		if ( '' === $country ) {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%", "%{$title}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%" ), ARRAY_A );
 		} else {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%", "%{$title}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%" ), ARRAY_A );
 		}
 
 		if ( ! empty( $results ) ) {

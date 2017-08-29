@@ -2443,7 +2443,7 @@ tr.shipping {
   font-size: 16px;
 }
 
-.onsale, .up-sells.upsells, .wc_points_rewards_earn_points {
+.onsale, .up-sells.upsells {
   display: none;
 }
 

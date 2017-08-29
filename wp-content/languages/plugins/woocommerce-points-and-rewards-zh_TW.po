@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-25 14:23+0800\n"
+"PO-Revision-Date: 2017-08-30 07:22+0800\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.8\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: zh_TW\n"
@@ -23,16 +23,16 @@ msgstr "註冊賺取紅利點數"
 #: includes/class-wc-points-rewards-actions.php:63
 msgid ""
 "Enter the amount of points earned when a customer signs up for an account."
-msgstr ""
+msgstr "輸入客戶註冊帳戶時賺取的紅利點數。"
 
 #: includes/class-wc-points-rewards-actions.php:68
 msgid "Points earned for writing a review"
-msgstr ""
+msgstr "寫下您的評論來賺取紅利點數"
 
 #: includes/class-wc-points-rewards-actions.php:69
 msgid ""
 "Enter the amount of points earned when a customer first reviews a product."
-msgstr ""
+msgstr "客戶首次評論產品時獲得的紅利點數。"
 
 #: includes/class-wc-points-rewards-actions.php:96
 msgid "%s earned for product review"
@@ -195,7 +195,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:583
 msgid "Purchase this product now and earn %s!"
-msgstr ""
+msgstr "現在購買此產品立即賺取 %s!"
 
 #: includes/class-wc-points-rewards-admin.php:589
 msgid "Earn Points Cart/Checkout Page Message"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:609
 msgid "Complete your order and earn %s for a discount on a future purchase"
-msgstr ""
+msgstr "完成你的訂單獲得 %s 折扣必於下次購物使用"
 
 #: includes/class-wc-points-rewards-admin.php:599
 msgid "Redeem Points Cart/Checkout Page Message"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:603
 msgid "Use %s for a %s discount on this order!"
-msgstr ""
+msgstr "使用 %s for a %s 這次訂單折扣"
 
 #: includes/class-wc-points-rewards-admin.php:610
 msgid "Points Earned for Actions"

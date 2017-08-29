@@ -5,16 +5,16 @@ msgstr ""
 "Project-Id-Version: WooCommerce Points and Rewards 1.3.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/woocommerce-points-and-"
 "rewards\n"
-"POT-Creation-Date: 2017-08-27 16:19+0800\n"
-"PO-Revision-Date: 2017-08-27 16:19+0800\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: zh_TW\n"
+"POT-Creation-Date: 2017-08-25 11:08+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"PO-Revision-Date: 2017-08-25 14:23+0800\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_TW\n"
 
 #: includes/class-wc-points-rewards-actions.php:62
 msgid "Points earned for account signup"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-actions.php:68
 msgid "Points earned for writing a review"
-msgstr "寫下您的評論來賺取紅利點數"
+msgstr ""
 
 #: includes/class-wc-points-rewards-actions.php:69
 msgid ""
@@ -45,13 +45,13 @@ msgstr ""
 #: includes/class-wc-points-rewards-admin.php:48
 #: includes/class-wc-points-rewards-admin.php:221
 msgid "Manage Points"
-msgstr "管理設定"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:49
 #: includes/class-wc-points-rewards-admin.php:215
 #: includes/class-wc-points-rewards-admin.php:357
 msgid "Points Log"
-msgstr "紅利點數 Log"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:135
 msgid ""
@@ -61,17 +61,17 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:153
 msgid "WooCommerce"
-msgstr "WooCommerce"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:177
 #: includes/class-wc-points-rewards-admin.php:178
 #: includes/class-wc-points-rewards-admin.php:424
 msgid "Points & Rewards"
-msgstr "紅利點數和獎勵"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:330
 msgid "Manage Customer Points"
-msgstr "管理顧客設定"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:440
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:609
 msgid "Complete your order and earn %s for a discount on a future purchase"
-msgstr "完成你的訂單獲得 %s 折扣必於下次購物使用"
+msgstr ""
 
 #: includes/class-wc-points-rewards-admin.php:599
 msgid "Redeem Points Cart/Checkout Page Message"
@@ -407,7 +407,7 @@ msgstr ""
 
 #: includes/class-wc-points-rewards-order.php:222
 msgid "%d %s removed."
-msgstr ""
+msgstr "%d %s 已移除"
 
 #: includes/class-wc-points-rewards-order.php:237
 msgid "%d %s credited back to customer."
@@ -416,12 +416,12 @@ msgstr ""
 #: includes/class-wc-points-rewards-points-log-list-table.php:61
 #: templates/myaccount/my-points.php:27
 msgid "Event"
-msgstr ""
+msgstr "活動"
 
 #: includes/class-wc-points-rewards-points-log-list-table.php:62
 #: templates/myaccount/my-points.php:28
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: includes/class-wc-points-rewards-points-log-list-table.php:241
 msgid "No log entries found"

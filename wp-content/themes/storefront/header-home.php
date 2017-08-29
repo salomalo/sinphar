@@ -51,7 +51,7 @@
 				?>
 					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">我的帳戶</a>
 					<span> | </span>
-					<a href="<?php echo wp_logout_url(); ?>">登出</a>
+					<a href="<?php echo wp_logout_url( home_url() ); ?>">登出</a>
 				<?php } else{ ?>
 					<a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>">會員登入</a>
 					<span> | </span>	

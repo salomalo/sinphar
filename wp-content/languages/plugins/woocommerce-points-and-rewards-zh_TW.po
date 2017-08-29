@@ -207,7 +207,7 @@ msgid ""
 "the message using {points} and {points_label}. Limited HTML is allowed."
 msgstr ""
 
-#: includes/class-wc-points-rewards-admin.php:593
+#: includes/class-wc-points-rewards-admin.php:609
 msgid "Complete your order and earn %s for a discount on a future purchase"
 msgstr "完成你的訂單獲得 %s 折扣必於下次購物使用"
 

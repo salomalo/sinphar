@@ -2159,8 +2159,12 @@ table.cart td.actions .coupon{
 	padding-left: .5em;
 }
 
+.pickup-location-field a, .pickup-location-current-lookup-area{
+	font-size: 16px;
+}
+
 // 暫時隱藏
-.onsale, .up-sells.upsells{
+.onsale, .up-sells.upsells, .wc_points_rewards_earn_points{
 	display: none;
 }
 // .onsale, .wc-points-rewards-product-message, p.price, .cart{

@@ -2433,7 +2433,11 @@ table.cart td.actions .coupon {
   padding-left: .5em;
 }
 
-.onsale, .up-sells.upsells {
+.pickup-location-field a, .pickup-location-current-lookup-area {
+  font-size: 16px;
+}
+
+.onsale, .up-sells.upsells, .wc_points_rewards_earn_points {
   display: none;
 }
 

@@ -1908,7 +1908,8 @@ body.search-results{
 			color: $white;
 			padding: 6px 15px;
 			letter-spacing: 5px;
-			font-size: 18px;
+			font-size: 16px;
+			border-radius: 3px;
 		}
 		.register-content{
 			padding-top: 12%;
@@ -1918,6 +1919,7 @@ body.search-results{
 				padding: 6px 25px;
 				font-weight: 400;
 				margin-top: 12%;
+				border-radius: 3px;
 			}
 		}
 	}
@@ -2171,6 +2173,27 @@ tr.shipping{
 .onsale, .up-sells.upsells{
 	display: none;
 }
+
+.wc-proceed-to-checkout .button.checkout-button{
+	border-radius: 5px;
+}
+
+
+// reset password
+.woocommerce-ResetPassword{
+	@media (min-width: 768px){
+		.form-row-first {
+			float: none;
+		  margin: 0 auto 20px;
+		}
+	}
+	.g-recaptcha{
+		> div{
+			margin: 0 auto 20px;
+		}
+	}
+}
+
 // .onsale, .wc-points-rewards-product-message, p.price, .cart{
 // 	display: none;
 // }

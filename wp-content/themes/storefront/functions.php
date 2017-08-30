@@ -112,6 +112,6 @@ remove_action( 'wp_head', 'feed_links_extra', 3 );
 
 // 隱藏 WordPress 登入畫面的錯誤訊息
 function no_errors_please(){
- return 'GET OFF MY LAWN !! RIGHT NOW !!';
+ return '帳號或密碼錯誤，請重新輸入';
 }
 add_filter( 'login_errors', 'no_errors_please' );

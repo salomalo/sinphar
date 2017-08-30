@@ -2141,7 +2141,8 @@ body.search-results .entry-content .wp-post-image {
   color: #fff;
   padding: 6px 15px;
   letter-spacing: 5px;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 3px;
 }
 
 .my-account .l-login-form .register-content, .my-account .r-register-form .register-content {
@@ -2154,6 +2155,7 @@ body.search-results .entry-content .wp-post-image {
   padding: 6px 25px;
   font-weight: 400;
   margin-top: 12%;
+  border-radius: 3px;
 }
 
 @media (min-width: 768px) {
@@ -2445,6 +2447,21 @@ tr.shipping {
 
 .onsale, .up-sells.upsells {
   display: none;
+}
+
+.wc-proceed-to-checkout .button.checkout-button {
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-ResetPassword .form-row-first {
+    float: none;
+    margin: 0 auto 20px;
+  }
+}
+
+.woocommerce-ResetPassword .g-recaptcha > div {
+  margin: 0 auto 20px;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

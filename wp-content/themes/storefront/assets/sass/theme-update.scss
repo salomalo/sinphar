@@ -507,6 +507,9 @@ footer{
 			font-size: 15px;
 		}
 	}
+	#sfsi-widget-2{
+		margin: 0;
+	}
 	.site-info{
 		padding: 0;
 	}
@@ -1825,6 +1828,12 @@ body.search-results{
 }
 
 // login & signup
+div.site.signup{
+	.entry-header h1.entry-title{
+		display: block;
+		text-align: center;
+	}
+}
 .my-account{
 	.woocommerce{
 		clear: both;
@@ -2193,6 +2202,26 @@ tr.shipping{
 		}
 	}
 }
+
+.site-content>.col-full>.woocommerce>.woocommerce-error:first-child, .site-content>.col-full>.woocommerce>.woocommerce-info:first-child, .site-content>.col-full>.woocommerce>.woocommerce-message:first-child{
+	margin: 0;
+}
+
+.woocommerce-MyAccount-content{
+	table tr:first-child, .rm-user-field-row:last-child, #rm_my_details_tab{
+		display: none;
+	}
+	.rm-user-field-row{
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+.rm_captcha_fieldrow{
+	.g-recaptcha > div{
+		margin: 0 auto!important;
+	}
+}
+
 
 // .onsale, .wc-points-rewards-product-message, p.price, .cart{
 // 	display: none;

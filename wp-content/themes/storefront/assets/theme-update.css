@@ -589,6 +589,10 @@ footer .footer-widgets p {
   font-size: 15px;
 }
 
+footer #sfsi-widget-2 {
+  margin: 0;
+}
+
 footer .site-info {
   padding: 0;
 }
@@ -2035,6 +2039,11 @@ body.search-results .entry-content .wp-post-image {
   width: 45%;
 }
 
+div.site.signup .entry-header h1.entry-title {
+  display: block;
+  text-align: center;
+}
+
 .my-account .woocommerce {
   clear: both;
   overflow: hidden;
@@ -2462,6 +2471,22 @@ tr.shipping {
 
 .woocommerce-ResetPassword .g-recaptcha > div {
   margin: 0 auto 20px;
+}
+
+.site-content > .col-full > .woocommerce > .woocommerce-error:first-child, .site-content > .col-full > .woocommerce > .woocommerce-info:first-child, .site-content > .col-full > .woocommerce > .woocommerce-message:first-child {
+  margin: 0;
+}
+
+.woocommerce-MyAccount-content table tr:first-child, .woocommerce-MyAccount-content .rm-user-field-row:last-child, .woocommerce-MyAccount-content #rm_my_details_tab {
+  display: none;
+}
+
+.woocommerce-MyAccount-content .rm-user-field-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.rm_captcha_fieldrow .g-recaptcha > div {
+  margin: 0 auto !important;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

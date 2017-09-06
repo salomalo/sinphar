@@ -36,6 +36,7 @@ if ( ! $post->post_excerpt ) {
 		$price = get_post_meta( get_the_ID(), '_regular_price', true);
 		$sale = get_post_meta( get_the_ID(), '_sale_price', true);
 		$link = get_permalink( get_the_ID());
+		$numleft = get_post_meta( get_the_ID() , 'total_sales', true); 
 
 		get_post_type();
 	?>
@@ -53,16 +54,20 @@ if ( ! $post->post_excerpt ) {
 	<div class="woocommerce-product-details__short-description">
 	    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
 	</div>
-	<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
-		查詢杏輝專櫃門市
-	</a>
+	<?php if($numleft > 0) { ?>
+		<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
+			查詢杏輝專櫃門市
+		</a>
+	<?php } ?>
 <?php }else{?>
 		<div class="woocommerce-product-details__short-description">
 		    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
 		</div>
-		<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
+		<?php if($numleft > 0) { ?>
+			<a class="btn-blue" href="<?php echo get_site_url().'/store-locator/?country=臺北市&district=&zipcode=undefined&pages=1'?>">
 			查詢杏輝專櫃門市
-		</a>
+			</a>
+		<?php } ?>
 	</div>
 <?php } ?>
 

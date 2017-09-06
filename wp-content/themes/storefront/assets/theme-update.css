@@ -94,6 +94,11 @@ input[type="submit"]:hover, .rmagic .buttonarea input[type='button']:hover, butt
   }
 }
 
+input[name="login"]:disabled {
+  opacity: 1 !important;
+  cursor: pointer !important;
+}
+
 .hentry .entry-header {
   border-bottom: none;
 }
@@ -2138,6 +2143,7 @@ div.site.signup .entry-header h1.entry-title {
 
 .my-account .l-login-form .l-btn, .my-account .r-register-form .l-btn {
   float: left;
+  margin: 7px 0 0 0;
 }
 
 .my-account .l-login-form .r-btn, .my-account .r-register-form .r-btn {
@@ -2487,6 +2493,13 @@ tr.shipping {
 
 .rm_captcha_fieldrow .g-recaptcha > div {
   margin: 0 auto !important;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-lost-password .form-row-last {
+    float: none;
+    margin: 0 auto 20px !important;
+  }
 }
 
 /*# sourceMappingURL=theme-update.css.map */

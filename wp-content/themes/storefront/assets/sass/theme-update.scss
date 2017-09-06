@@ -88,6 +88,10 @@ input[type="submit"], .rmagic .buttonarea input[type='button'], button{
 		padding: 3px 15px;
 	}
 }
+input[name="login"]:disabled{
+	opacity: 1!important;
+	cursor: pointer!important;
+}
 .hentry .entry-header{
 	border-bottom: none;
 }
@@ -1906,6 +1910,7 @@ div.site.signup{
 		}
 		.l-btn{
 			float: left;
+			margin: 7px 0 0 0;
 		}
 		.r-btn{
 			float: right;
@@ -2219,6 +2224,13 @@ tr.shipping{
 .rm_captcha_fieldrow{
 	.g-recaptcha > div{
 		margin: 0 auto!important;
+	}
+}
+
+@media (min-width: 768px){
+	body.woocommerce-lost-password .form-row-last {
+		float: none;
+		margin: 0 auto 20px!important;
 	}
 }
 

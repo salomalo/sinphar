@@ -1029,6 +1029,25 @@ body.single p .woocommerce-Price-amount {
   }
 }
 
+body.woocommerce-page main.site-main {
+  position: relative;
+}
+
+.woocommerce-pagination {
+  bottom: -20px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  float: none;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .woocommerce-pagination {
+    bottom: -40px;
+  }
+}
+
 body.woocommerce-page .widget-area .widget-title {
   border: none;
   color: #11337d;
@@ -2500,6 +2519,11 @@ tr.shipping {
     float: none;
     margin: 0 auto 20px !important;
   }
+}
+
+.quantity .qty {
+  padding: 9px 6px;
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

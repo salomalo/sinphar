@@ -113,11 +113,16 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 			}
 		?>
 		<ul id="site-header-cart" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
+			<li class="btn-cart-box <?php echo esc_attr( $class ); ?>">
 				<?php storefront_cart_link(); ?>
 			</li>
 			<li>
 				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			</li>
+			<li class="btn-fb">
+				<a href="https://www.facebook.com/sinphar.store/?fref=ts" target="_blank">
+					<img width="25" src="<?php echo plugins_url().'/ultimate-social-media-icons/images/icons_theme/default/default_facebook.png' ?>" alt="">
+				</a>
 			</li>
 		</ul>
 		<?php

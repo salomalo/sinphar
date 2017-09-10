@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the WordPress - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-12-06 14:17:20+0000\n"
+"PO-Revision-Date: 2017-09-10 18:14+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/2.3.0-alpha\n"
+"X-Generator: Poedit 1.8.8\n"
 "Language: zh_TW\n"
 "Project-Id-Version: WordPress - Development - Administration\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #. translators: default GMT offset or timezone string. Must be either a valid
 #. offset (-12 to 14) 	   or a valid timezone string (America/New_York). See
@@ -8761,7 +8764,7 @@ msgstr "歡迎來到 WordPress。這是你的第一篇文章。編輯或者刪�
 #: wp-admin/includes/upgrade.php:136
 msgctxt "Default category slug"
 msgid "Uncategorized"
-msgstr "Uncategorized"
+msgstr "未分類"
 
 #: wp-admin/includes/upgrade.php:77
 msgid "<strong><em>Note that password</em></strong> carefully! It is a <em>random</em> password that was generated just for you."

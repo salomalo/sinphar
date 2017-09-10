@@ -353,20 +353,19 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	 */
 	function storefront_post_header() {
 		?>
-		<header class="entry-header">
 		<?php
 		if ( is_single() ) {
+			the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header>' );
 			storefront_posted_on();
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			storefront_post_meta();
 		} else {
+			the_title( sprintf( '<header class="entry-header"><h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2></header>' );
 			if ( 'post' == get_post_type() ) {
 				storefront_posted_on();
 			}
-
-			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
 		?>
-		</header><!-- .entry-header -->
+		<!-- .entry-header -->
 		<?php
 	}
 }
@@ -404,6 +403,12 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		) );
 		?>
 		</div><!-- .entry-content -->
+		<?php if ( is_category() || is_author() ) {?>
+			<div class="btn-readmore">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="vc_gitem-link vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-grey">繼續閱讀</a>
+			</div>
+		<?php } ?>
+
 		<?php
 	}
 }
@@ -422,8 +427,8 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			?>
 			<div class="author">
 				<?php
-					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
-					echo '<div class="label">' . esc_attr( __( 'Written by', 'storefront' ) ) . '</div>';
+					// echo get_avatar( get_the_author_meta( 'ID' ), 128 );
+					echo '<div class="label">' . 'By ' . '</div>';
 					the_author_posts_link();
 				?>
 			</div>

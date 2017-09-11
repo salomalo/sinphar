@@ -1501,6 +1501,7 @@ body.archive, body.archive.category, body.archive.author{
 	.cate-links a{
 		color: $gray-text;
 		padding-bottom: 5px;
+		display: inline-block;
 	}
 	.border-top-bottom{
 		border-top: 1px solid #EBEBEB;

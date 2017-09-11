@@ -12,6 +12,7 @@ $gray-lighter: #f3f3f3;
 $gray-bg: #f0f0f0;
 $gray-faq: #dbdcdc;
 $gray-login: #aaabab;
+$gray-post-link: #6d6d6d;
 $font: 'Noto Sans TC', sans-serif;
 
 // body
@@ -1486,8 +1487,7 @@ body.archive, body.archive.category, body.archive.author{
 		text-align: center;
 	}
 	article{
-		border-bottom: 1px solid #EBEBEB;
-		padding-bottom: 5%;
+		padding-bottom: 0;
 		aside.entry-meta:nth-child(3){
 			display: none;
 		}
@@ -1498,17 +1498,27 @@ body.archive, body.archive.category, body.archive.author{
 	.cat-links{
 		display: none;
 	}
+	.cate-links a{
+		color: $gray-text;
+		padding-bottom: 5px;
+	}
+	.border-top-bottom{
+		border-top: 1px solid #EBEBEB;
+		border-bottom: 1px solid #EBEBEB;
+		margin-top: 4%;
+		padding: 5px 0;
+	}
 	.entry-content{
 		text-align: left;
 	}
 	
 	.hentry.type-post{
 		.posted-on, .entry-meta, .entry-meta{
-			color: #6d6d6d;
+			color: $gray-post-link;
 			font-size: 18px;
 			font-weight: 400;
 			a{
-				color: #6d6d6d;
+				color: $gray-post-link;
 			}
 		}
 	}

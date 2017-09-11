@@ -354,6 +354,18 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	function storefront_post_header() {
 		?>
 		<?php
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+
+		if ( $categories_list ) : ?>
+			<div class="cate-links">
+				<?php
+				echo wp_kses_post( $categories_list );
+				?>
+			</div>
+		<?php endif; // End if categories. ?>
+
+		<?php
 		if ( is_single() ) {
 			the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header>' );
 			storefront_posted_on();
@@ -388,19 +400,27 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		 */
 		do_action( 'storefront_post_content_before' );
 
-		the_content(
-			sprintf(
-				__( 'Continue reading %s', 'storefront' ),
-				'<span class="screen-reader-text">' . get_the_title() . '</span>'
-			)
-		);
+		if ( is_single() ) {
+
+			the_content(
+				sprintf(
+					__( 'Continue reading %s', 'storefront' ),
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
+				)
+			);
+
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+				'after'  => '</div>',
+			) );
+		}else{
+			$content = get_the_content();
+    		$trimmed_content = wp_trim_words( $content, 50, NULL );
+    		echo $trimmed_content;
+		}
 
 		do_action( 'storefront_post_content_after' );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-			'after'  => '</div>',
-		) );
 		?>
 		</div><!-- .entry-content -->
 		<?php if ( is_category() || is_author() ) {?>
@@ -408,6 +428,18 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 				<a href="<?php echo esc_url( get_permalink() ); ?>" class="vc_gitem-link vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-grey">繼續閱讀</a>
 			</div>
 		<?php } ?>
+
+		<?php
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+
+		if ( $categories_list ) : ?>
+			<div class="cate-links border-top-bottom">
+				<?php
+				echo wp_kses_post( $categories_list );
+				?>
+			</div>
+		<?php endif; // End if categories. ?>
 
 		<?php
 	}
@@ -432,18 +464,6 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					the_author_posts_link();
 				?>
 			</div>
-			<?php
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
-
-			if ( $categories_list ) : ?>
-				<div class="cat-links">
-					<?php
-					echo '<div class="label">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';
-					echo wp_kses_post( $categories_list );
-					?>
-				</div>
-			<?php endif; // End if categories. ?>
 
 			<?php
 			/* translators: used between list items, there is a space after the comma */
@@ -494,8 +514,8 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	 */
 	function storefront_post_nav() {
 		$args = array(
-			'next_text' => '%title',
-			'prev_text' => '%title',
+			'next_text' => '下一篇',
+			'prev_text' => '上一篇',
 			);
 		the_post_navigation( $args );
 	}

@@ -315,12 +315,18 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		$title = $city;
 		$address_1 = $city;
 
+		$city_c = strpos($city, '台') !== false ? str_replace('台', '臺', $city) : (strpos($city, '臺') !== false ? str_replace('臺', '台', $city) : $city);
+		$title_c = $address_1_c = $city_c;
+
 		if ( '' === $country ) {
 			$query = "
 				SELECT post_id
 				FROM {$table}
 				WHERE city LIKE %s 
 				OR postcode LIKE %s
+				OR title LIKE %s
+				OR address_1 LIKE %s
+				OR city LIKE %s 
 				OR title LIKE %s
 				OR address_1 LIKE %s
 				ORDER BY postcode
@@ -331,7 +337,15 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 				FROM {$table}
 				WHERE country = %s
 				AND state = %s
-				AND ( city LIKE %s OR postcode LIKE %s OR title LIKE %s OR address_1 LIKE %s )
+				AND ( 
+					city LIKE %s 
+					OR postcode LIKE %s 
+					OR title LIKE %s 
+					OR address_1 LIKE %s 
+					OR city LIKE %s 
+					OR title LIKE %s 
+					OR address_1 LIKE %s 
+				)
 				ORDER BY postcode
 			";
 		}
@@ -343,9 +357,9 @@ class WC_Local_Pickup_Plus_Pickup_Locations {
 		}
 
 		if ( '' === $country ) {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%", "%{$city_c}%", "%{$title_c}%", "%{$address_1_c}%" ), ARRAY_A );
 		} else {
-			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%" ), ARRAY_A );
+			$results = $wpdb->get_results( $wpdb->prepare( "{$query}", $country, $state, "%{$city}%", "%{$postcode}%", "%{$title}%", "%{$address_1}%", "%{$city_c}%", "%{$title_c}%", "%{$address_1_c}%" ), ARRAY_A );
 		}
 
 		if ( ! empty( $results ) ) {

@@ -72,7 +72,7 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	function storefront_cart_link() {
 		?>
 			<!-- change cart url -->
-			<a class="cart-contents" href="http://www.pcstore.com.tw/sinphar" target="_blank" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<a class="cart-contents" href="http://www.pcstore.com.tw/sinphar" target="_blank" title="連結購物">
 			</a>
 		<?php
 	}

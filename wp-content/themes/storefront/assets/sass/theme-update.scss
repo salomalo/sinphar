@@ -151,7 +151,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 				width: 60px;
 				height: 25px;
 				position: absolute;
-				top: 35px;
+				top: 40px;
 				left: 0;
 				background:url('./images/icon-triangle.svg') no-repeat center;
 				z-index: 400;
@@ -227,7 +227,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 	li{
 		display: inline-block;
 		&.btn-cart-box{
-			padding-right: 5px;
+			padding-right: 12px;
 			position: relative;
 		}
 		&.btn-fb{
@@ -242,7 +242,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 // logo
 @media (min-width: 1024px) {
 	.site-header .site-branding{
-		width: 65%;
+		width: 63%;
 	}
 }
 
@@ -1643,6 +1643,9 @@ body.single{
 		.hentry.type-post .entry-content, .entry-content{
 			padding: 2em 1em;
 		}
+		.site-content>.col-full>.woocommerce>.woocommerce-message:first-child{
+			margin: 0 0 20px 0;
+		}
 	}
 	.hentry .wp-post-image{
 		margin-left: 0;
@@ -2040,6 +2043,20 @@ body.search-results{
 
 // login & signup
 div.site.signup{
+	@media (max-width: 900px) {
+		.rmagic .rmrow .rminput input[type="text"], .rmagic .rmrow .rminput input[type="password"], .rmagic .rmrow .rminput input[type="email"], .rmagic .rmrow .rminput input[type="url"], .rmagic .rmrow .rminput input[type="number"], .rmagic .rmrow .rminput textarea, .rmagic .rmrow .rminput select{
+			width: 100%;
+		}
+	}
+	.text-address{
+		text-align: right;
+    margin: -15px 0 0 -4%;
+    width: 100%;
+    @media (max-width: 700px) {
+			text-align: left;
+    	margin: -15px 0 0 0;
+    }
+	}
 	.entry-header h1.entry-title{
 		display: block;
 		text-align: center;

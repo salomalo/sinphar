@@ -71,8 +71,8 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	 */
 	function storefront_cart_link() {
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-				<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			<!-- change cart url -->
+			<a class="cart-contents" href="http://www.pcstore.com.tw/sinphar" target="_blank" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
 			</a>
 		<?php
 	}

@@ -580,6 +580,10 @@ button.menu-toggle:hover {
   }
 }
 
+footer .widget {
+  margin: 0 0 2em;
+}
+
 footer.site-footer {
   background: #fff;
   border-top: 3px solid #128043;
@@ -1445,12 +1449,12 @@ ul.products.list a.btn-blue {
 
 @media (min-width: 768px) {
   .left-sidebar #page.healthy .widget-area, .archive.category #page.healthy .widget-area, .archive.author #page.healthy .widget-area {
-    float: right;
-    margin-left: 4.347826087%;
-    margin-right: 0;
+    float: left;
+    margin-right: 4.347826087%;
+    margin-left: 0;
   }
   .left-sidebar #page.healthy .content-area, .archive.category #page.healthy .content-area, .archive.author #page.healthy .content-area {
-    float: left;
+    float: right;
   }
 }
 

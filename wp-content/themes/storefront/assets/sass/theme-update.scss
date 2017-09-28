@@ -504,6 +504,9 @@ button.menu-toggle{
 
 // footer
 footer{
+	.widget {
+		margin: 0 0 2em;
+	}
 	&.site-footer{
 		background: $white;
 		border-top: 3px solid $green;
@@ -1258,12 +1261,12 @@ ul.products{
 		&.healthy{
 			@media (min-width: 768px) {
 				.widget-area{
-					float: right;
-					margin-left: 4.347826087%;
-					margin-right: 0;
+					float: left;
+					margin-right: 4.347826087%;
+					margin-left: 0;
 				}
 				.content-area{
-					float: left;
+					float: right;
 				}
 			}
 

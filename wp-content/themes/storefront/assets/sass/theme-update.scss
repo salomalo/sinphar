@@ -505,7 +505,10 @@ button.menu-toggle{
 // footer
 footer{
 	.widget {
-		margin: 0 0 2em;
+		margin: 0;
+		@media (max-width: 768px) {
+			font-size: 12px;
+		}
 	}
 	&.site-footer{
 		background: $white;
@@ -547,17 +550,22 @@ footer{
 	.footer-widgets.col-4 .block{
 		width: 100%;
 		text-align: center;
+		padding: 5% 0;
+		font-size: 14px;
 	}
 	.footer-widget-4{
 		display: none;
 	}
 	@media (min-width: 768px) {
 		.footer-widgets.col-4 .block{
-			width: 45%;
+			width: 65%;
 			text-align: left;
+			padding: 0;
+			font-size: 15px;
 		}
-		.footer-widget-4{
+		.footer-widgets.col-4 .block.footer-widget-4{
 			display: block;
+			width: 30%;
 		}
 	}
 	.norm_row{
@@ -1258,7 +1266,8 @@ ul.products{
 		}
 	}
 	#page{
-		&.healthy{
+		&.healthy,
+		&.news{
 			@media (min-width: 768px) {
 				.widget-area{
 					float: left;
@@ -1443,6 +1452,7 @@ ul.products{
 
 // 健康須知 post
 .healthy,
+.news,
 body.archive, body.archive.category, body.archive.author{
 	.vc_gitem-post-category-name,
 	.vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item{

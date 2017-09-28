@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RegistrationMagic\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-30 21:59+0800\n"
-"PO-Revision-Date: 2017-08-31 05:44+0800\n"
+"PO-Revision-Date: 2017-09-28 20:10+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -1288,7 +1288,7 @@ msgstr ""
 #: includes/class_rm_ui_strings.php:975
 msgid ""
 "This user is already registered. Please try with different username or login."
-msgstr ""
+msgstr "此帳號已經註冊過了。請嘗試輸入其他帳號或是登入。"
 
 #: includes/class_rm_ui_strings.php:978
 msgid "Fixed"
@@ -1643,7 +1643,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:1231
 msgid "Redirecting you to"
-msgstr ""
+msgstr "頁面跳轉到"
 
 #: includes/class_rm_ui_strings.php:1234
 msgid "Payment Successfull"

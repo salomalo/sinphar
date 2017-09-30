@@ -121,3 +121,6 @@ function custom_excerpt_length( $length ) {
 	return 200;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// hide add to cart button
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );

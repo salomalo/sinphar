@@ -115,3 +115,9 @@ function no_errors_please(){
  return '帳號或密碼錯誤，請重新輸入';
 }
 add_filter( 'login_errors', 'no_errors_please' );
+
+// To change this default excerpt length 
+function custom_excerpt_length( $length ) {
+	return 200;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

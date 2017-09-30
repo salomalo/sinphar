@@ -1266,8 +1266,7 @@ ul.products{
 		}
 	}
 	#page{
-		&.healthy,
-		&.news{
+		&.healthy{
 			@media (min-width: 768px) {
 				.widget-area{
 					float: left;
@@ -1452,7 +1451,6 @@ ul.products{
 
 // 健康須知 post
 .healthy,
-.news,
 body.archive, body.archive.category, body.archive.author{
 	.vc_gitem-post-category-name,
 	.vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item{
@@ -1819,7 +1817,7 @@ body.woocommerce-account .no-sidebar-container{
 .post-bottom-section,
 body.search-results .entry-content{
 	background: $gray-bg;
-	padding: 20px;
+	padding: 25px;
 	.vc_gitem-row-position-top{
 		position: relative;
 	}
@@ -1836,8 +1834,8 @@ body.search-results .entry-content{
 	}
 	.post-btn-group{
 		position: absolute;
-    bottom: -10px;
-    right: 15px;
+		bottom: -30px;
+    right: 5px;
 	}
 }
 
@@ -1850,6 +1848,12 @@ body.search-results .entry-content{
 			margin: 0;
 			font-size: 15px;
 		}
+	}
+}
+
+.site.news{
+	.wpb_single_image{
+		padding-right: 15px;
 	}
 }
 

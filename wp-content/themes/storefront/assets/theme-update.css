@@ -1459,26 +1459,17 @@ ul.products.list a.btn-blue {
 }
 
 @media (min-width: 768px) {
-  .left-sidebar #page.healthy .widget-area,
-  .left-sidebar #page.news .widget-area, .archive.category #page.healthy .widget-area,
-  .archive.category #page.news .widget-area, .archive.author #page.healthy .widget-area,
-  .archive.author #page.news .widget-area {
+  .left-sidebar #page.healthy .widget-area, .archive.category #page.healthy .widget-area, .archive.author #page.healthy .widget-area {
     float: left;
     margin-right: 4.347826087%;
     margin-left: 0;
   }
-  .left-sidebar #page.healthy .content-area,
-  .left-sidebar #page.news .content-area, .archive.category #page.healthy .content-area,
-  .archive.category #page.news .content-area, .archive.author #page.healthy .content-area,
-  .archive.author #page.news .content-area {
+  .left-sidebar #page.healthy .content-area, .archive.category #page.healthy .content-area, .archive.author #page.healthy .content-area {
     float: right;
   }
 }
 
-.left-sidebar #page.healthy .widget-title,
-.left-sidebar #page.news .widget-title, .archive.category #page.healthy .widget-title,
-.archive.category #page.news .widget-title, .archive.author #page.healthy .widget-title,
-.archive.author #page.news .widget-title {
+.left-sidebar #page.healthy .widget-title, .archive.category #page.healthy .widget-title, .archive.author #page.healthy .widget-title {
   color: #11337d;
   font-size: 19px;
   letter-spacing: 3px;
@@ -1487,10 +1478,7 @@ ul.products.list a.btn-blue {
   padding-bottom: 5px;
 }
 
-.left-sidebar #page.healthy .widget-title:after,
-.left-sidebar #page.news .widget-title:after, .archive.category #page.healthy .widget-title:after,
-.archive.category #page.news .widget-title:after, .archive.author #page.healthy .widget-title:after,
-.archive.author #page.news .widget-title:after {
+.left-sidebar #page.healthy .widget-title:after, .archive.category #page.healthy .widget-title:after, .archive.author #page.healthy .widget-title:after {
   display: block;
   content: '';
   width: 25px;
@@ -1499,13 +1487,7 @@ ul.products.list a.btn-blue {
   margin-top: 3px;
 }
 
-.left-sidebar #page.healthy .post-date,
-.left-sidebar #page.healthy .wpp-date,
-.left-sidebar #page.news .post-date, .left-sidebar #page.news .wpp-date, .archive.category #page.healthy .post-date,
-.archive.category #page.healthy .wpp-date,
-.archive.category #page.news .post-date, .archive.category #page.news .wpp-date, .archive.author #page.healthy .post-date,
-.archive.author #page.healthy .wpp-date,
-.archive.author #page.news .post-date, .archive.author #page.news .wpp-date {
+.left-sidebar #page.healthy .post-date, .left-sidebar #page.healthy .wpp-date, .archive.category #page.healthy .post-date, .archive.category #page.healthy .wpp-date, .archive.author #page.healthy .post-date, .archive.author #page.healthy .wpp-date {
   color: #11337d;
   display: block;
   float: left;
@@ -1519,23 +1501,11 @@ ul.products.list a.btn-blue {
   font-weight: normal;
 }
 
-.left-sidebar #page.healthy .popular-posts li,
-.left-sidebar #page.healthy .widget_recent_entries li,
-.left-sidebar #page.news .popular-posts li, .left-sidebar #page.news .widget_recent_entries li, .archive.category #page.healthy .popular-posts li,
-.archive.category #page.healthy .widget_recent_entries li,
-.archive.category #page.news .popular-posts li, .archive.category #page.news .widget_recent_entries li, .archive.author #page.healthy .popular-posts li,
-.archive.author #page.healthy .widget_recent_entries li,
-.archive.author #page.news .popular-posts li, .archive.author #page.news .widget_recent_entries li {
+.left-sidebar #page.healthy .popular-posts li, .left-sidebar #page.healthy .widget_recent_entries li, .archive.category #page.healthy .popular-posts li, .archive.category #page.healthy .widget_recent_entries li, .archive.author #page.healthy .popular-posts li, .archive.author #page.healthy .widget_recent_entries li {
   text-align: left;
 }
 
-.left-sidebar #page.healthy .popular-posts a,
-.left-sidebar #page.healthy .widget_recent_entries a,
-.left-sidebar #page.news .popular-posts a, .left-sidebar #page.news .widget_recent_entries a, .archive.category #page.healthy .popular-posts a,
-.archive.category #page.healthy .widget_recent_entries a,
-.archive.category #page.news .popular-posts a, .archive.category #page.news .widget_recent_entries a, .archive.author #page.healthy .popular-posts a,
-.archive.author #page.healthy .widget_recent_entries a,
-.archive.author #page.news .popular-posts a, .archive.author #page.news .widget_recent_entries a {
+.left-sidebar #page.healthy .popular-posts a, .left-sidebar #page.healthy .widget_recent_entries a, .archive.category #page.healthy .popular-posts a, .archive.category #page.healthy .widget_recent_entries a, .archive.author #page.healthy .popular-posts a, .archive.author #page.healthy .widget_recent_entries a {
   color: #11337d;
   margin-top: 5px;
   display: block;
@@ -1546,22 +1516,13 @@ ul.products.list a.btn-blue {
 }
 
 @media (min-width: 768px) {
-  .left-sidebar #page.healthy .popular-posts a,
-  .left-sidebar #page.healthy .widget_recent_entries a,
-  .left-sidebar #page.news .popular-posts a, .left-sidebar #page.news .widget_recent_entries a, .archive.category #page.healthy .popular-posts a,
-  .archive.category #page.healthy .widget_recent_entries a,
-  .archive.category #page.news .popular-posts a, .archive.category #page.news .widget_recent_entries a, .archive.author #page.healthy .popular-posts a,
-  .archive.author #page.healthy .widget_recent_entries a,
-  .archive.author #page.news .popular-posts a, .archive.author #page.news .widget_recent_entries a {
+  .left-sidebar #page.healthy .popular-posts a, .left-sidebar #page.healthy .widget_recent_entries a, .archive.category #page.healthy .popular-posts a, .archive.category #page.healthy .widget_recent_entries a, .archive.author #page.healthy .popular-posts a, .archive.author #page.healthy .widget_recent_entries a {
     height: 18px;
     overflow: hidden;
   }
 }
 
-.left-sidebar #page.healthy .widget-area ul li,
-.left-sidebar #page.news .widget-area ul li, .archive.category #page.healthy .widget-area ul li,
-.archive.category #page.news .widget-area ul li, .archive.author #page.healthy .widget-area ul li,
-.archive.author #page.news .widget-area ul li {
+.left-sidebar #page.healthy .widget-area ul li, .archive.category #page.healthy .widget-area ul li, .archive.author #page.healthy .widget-area ul li {
   clear: both;
   overflow: hidden;
   margin-bottom: .6em;
@@ -1569,20 +1530,14 @@ ul.products.list a.btn-blue {
   border-bottom: 1px solid #b5b6b6;
 }
 
-.left-sidebar #page.healthy .widget_categories a,
-.left-sidebar #page.news .widget_categories a, .archive.category #page.healthy .widget_categories a,
-.archive.category #page.news .widget_categories a, .archive.author #page.healthy .widget_categories a,
-.archive.author #page.news .widget_categories a {
+.left-sidebar #page.healthy .widget_categories a, .archive.category #page.healthy .widget_categories a, .archive.author #page.healthy .widget_categories a {
   font-size: 18px;
   color: #11337d;
   padding: 6px 0;
   display: inline-block;
 }
 
-.left-sidebar #page.healthy .widget_categories .cat-item,
-.left-sidebar #page.news .widget_categories .cat-item, .archive.category #page.healthy .widget_categories .cat-item,
-.archive.category #page.news .widget_categories .cat-item, .archive.author #page.healthy .widget_categories .cat-item,
-.archive.author #page.news .widget_categories .cat-item {
+.left-sidebar #page.healthy .widget_categories .cat-item, .archive.category #page.healthy .widget_categories .cat-item, .archive.author #page.healthy .widget_categories .cat-item {
   color: #11337d;
 }
 
@@ -1687,8 +1642,6 @@ ul.products.list a.btn-blue {
 
 .healthy .vc_gitem-post-category-name:hover,
 .healthy .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item:hover,
-.news .vc_gitem-post-category-name:hover,
-.news .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item:hover,
 body.archive .vc_gitem-post-category-name:hover,
 body.archive .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item:hover, body.archive.category .vc_gitem-post-category-name:hover,
 body.archive.category .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item:hover, body.archive.author .vc_gitem-post-category-name:hover,
@@ -1698,8 +1651,6 @@ body.archive.author .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-
 
 .healthy .vc_gitem-post-category-name a,
 .healthy .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item a,
-.news .vc_gitem-post-category-name a,
-.news .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item a,
 body.archive .vc_gitem-post-category-name a,
 body.archive .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item a, body.archive.category .vc_gitem-post-category-name a,
 body.archive.category .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item a, body.archive.author .vc_gitem-post-category-name a,
@@ -1710,8 +1661,6 @@ body.archive.author .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-
 
 .healthy .vc_gitem-post-data-source-post_title,
 .healthy header.entry-header,
-.news .vc_gitem-post-data-source-post_title,
-.news header.entry-header,
 body.archive .vc_gitem-post-data-source-post_title,
 body.archive header.entry-header, body.archive.category .vc_gitem-post-data-source-post_title,
 body.archive.category header.entry-header, body.archive.author .vc_gitem-post-data-source-post_title,
@@ -1721,8 +1670,6 @@ body.archive.author header.entry-header {
 
 .healthy .vc_gitem-post-data-source-post_title h2,
 .healthy header.entry-header h2,
-.news .vc_gitem-post-data-source-post_title h2,
-.news header.entry-header h2,
 body.archive .vc_gitem-post-data-source-post_title h2,
 body.archive header.entry-header h2, body.archive.category .vc_gitem-post-data-source-post_title h2,
 body.archive.category header.entry-header h2, body.archive.author .vc_gitem-post-data-source-post_title h2,
@@ -1734,8 +1681,6 @@ body.archive.author header.entry-header h2 {
 
 .healthy .vc_gitem-post-data-source-post_title h2:after,
 .healthy header.entry-header h2:after,
-.news .vc_gitem-post-data-source-post_title h2:after,
-.news header.entry-header h2:after,
 body.archive .vc_gitem-post-data-source-post_title h2:after,
 body.archive header.entry-header h2:after, body.archive.category .vc_gitem-post-data-source-post_title h2:after,
 body.archive.category header.entry-header h2:after, body.archive.author .vc_gitem-post-data-source-post_title h2:after,
@@ -2117,7 +2062,7 @@ body.woocommerce-account .no-sidebar-container {
 .post-bottom-section,
 body.search-results .entry-content {
   background: #f0f0f0;
-  padding: 20px;
+  padding: 25px;
 }
 
 .post-bottom-section .vc_gitem-row-position-top,
@@ -2143,8 +2088,8 @@ body.search-results .entry-content .btn-post {
 .post-bottom-section .post-btn-group,
 body.search-results .entry-content .post-btn-group {
   position: absolute;
-  bottom: -10px;
-  right: 15px;
+  bottom: -30px;
+  right: 5px;
 }
 
 .top-post-data .wpb_content_element, .top-post-data .vc_gitem-post-data {
@@ -2156,6 +2101,10 @@ body.search-results .entry-content .post-btn-group {
 .top-post-data .wpb_content_element p, .top-post-data .vc_gitem-post-data p {
   margin: 0;
   font-size: 15px;
+}
+
+.site.news .wpb_single_image {
+  padding-right: 15px;
 }
 
 .news-top-section {

@@ -1113,6 +1113,14 @@ ul.products{
 
 	// grid
 	&.grid{
+		@media (min-width: 768px) {
+			display: flex;
+	    justify-content: space-between;
+	    flex-wrap: wrap;
+	    .product-detail{
+				padding-bottom: 32px;
+			}
+		}
 		li.product{
 			border: 1px solid $gray-border;
 		}
@@ -1122,6 +1130,11 @@ ul.products{
 		// 暫時隱藏 chart 的按鈕
 		.gridlist-buttonwrap{
 			// display: none;
+			@media (min-width: 768px) {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
 		}
 		
 		// hover
@@ -1182,6 +1195,11 @@ ul.products{
 				img{
 					width: 100%!important;
 				}
+			}
+			h2{
+				height: 80px;
+				max-height: 80px;
+				overflow: hidden;
 			}
 		}
 		hr{

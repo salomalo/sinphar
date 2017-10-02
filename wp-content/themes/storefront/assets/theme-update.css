@@ -1320,6 +1320,12 @@ ul.products.grid .woocommerce-loop-product__title {
   }
 }
 
+ul.products.grid a.btn-blue {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 ul.products.grid li.product {
   position: relative;
 }
@@ -1919,6 +1925,11 @@ body.single.single-product .hentry.type-post .entry-content, body.single.single-
 body.post-template-default.single-product .site-content > .col-full > .woocommerce > .woocommerce-message:first-child,
 body.single.single-product .site-content > .col-full > .woocommerce > .woocommerce-message:first-child {
   margin: 0 0 20px 0;
+}
+
+body.post-template-default.single-product .product-detail,
+body.single.single-product .product-detail {
+  padding-bottom: 15px;
 }
 
 body.post-template-default .hentry .wp-post-image,
@@ -2813,6 +2824,10 @@ tr.shipping {
 .quantity .qty {
   padding: 9px 6px;
   border-radius: 0;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body {
+  background: transparent;
 }
 
 /*# sourceMappingURL=theme-update.css.map */

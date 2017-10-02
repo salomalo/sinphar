@@ -124,3 +124,4 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // hide add to cart button
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );

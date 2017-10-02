@@ -1136,6 +1136,12 @@ ul.products{
 				width: 100%;
 			}
 		}
+
+		a.btn-blue{
+			position: absolute;
+	    bottom: 0;
+	    width: 100%;
+		}
 		
 		// hover
 		li.product{
@@ -1669,6 +1675,9 @@ body.single{
 		}
 		.site-content>.col-full>.woocommerce>.woocommerce-message:first-child{
 			margin: 0 0 20px 0;
+		}
+		.product-detail{
+			padding-bottom: 15px;
 		}
 	}
 	.hentry .wp-post-image{
@@ -2497,3 +2506,9 @@ tr.shipping{
 // .onsale, .wc-points-rewards-product-message, p.price, .cart{
 // 	display: none;
 // }
+
+
+// tab
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body{
+	background:transparent;
+}

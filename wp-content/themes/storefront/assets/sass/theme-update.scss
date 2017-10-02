@@ -124,7 +124,7 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 // logo
 @media (min-width: 768px){
 	body:not(.home) .primary-navigation {
-		width: 90%;
+		width: 95%;
 		margin: 0 auto;
 	}
 	.main-navigation ul.menu, .main-navigation ul.nav-menu{
@@ -1114,15 +1114,28 @@ ul.products{
 	// grid
 	&.grid{
 		@media (min-width: 768px) {
-			display: flex;
-	    justify-content: space-between;
-	    flex-wrap: wrap;
+			// display: flex;
+	  //   justify-content: space-between;
+	  //   flex-wrap: wrap;
 	    .product-detail{
 				padding-bottom: 32px;
+				height: 135px;
+				overflow: hidden;
 			}
 		}
 		li.product{
 			border: 1px solid $gray-border;
+			float: none;
+			@media (min-width: 768px){
+		    width: 29%;
+		    margin-right: 5%;
+			}
+			@media (min-width: 768px){
+				h2{
+					height: 60px;
+					overflow: hidden;
+				}
+			}
 		}
 		.woocommerce-loop-product__title{
 			color: $gray-text;
@@ -1141,6 +1154,7 @@ ul.products{
 			position: absolute;
 	    bottom: 0;
 	    width: 100%;
+	    z-index: 100;
 		}
 		
 		// hover
@@ -1160,6 +1174,7 @@ ul.products{
 					background: url('./images/icon-product-hover.svg') no-repeat center 30% rgba(8, 47, 128, 0.35);
 					top: 0;
 					left: 0;
+					z-index: 200;
 				}
 				.btn-blue{
 					opacity: 0;
@@ -1185,6 +1200,7 @@ ul.products{
 	
 	// list
 	&.list{
+		display: block!important;
 		li.product{
 			border-bottom: 1px solid $gray-border;
 			padding-bottom: 5%;
@@ -1876,6 +1892,16 @@ body.search-results .entry-content{
 .site.news{
 	.wpb_single_image{
 		padding-right: 15px;
+		@media (min-width: 768px) {
+			img{
+				height: 180px
+			}
+		}
+		@media (min-width: 1024px) {
+			img{
+				height: 300px
+			}
+		}
 	}
 }
 
@@ -2508,7 +2534,52 @@ tr.shipping{
 // }
 
 
+
 // tab
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body{
-	background:transparent;
+.page-template{
+	.faq-tab-container{
+		.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body,
+		.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels{
+			background: transparent !important;
+			border-color: transparent !important;
+		}
+		.vc_tta-tabs:not([class*=vc_tta-gap]):not(.vc_tta-o-no-fill).vc_tta-tabs-position-top .vc_tta-tab.vc_active>a::after{
+			display: none!important;
+		}
+		.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels .vc_tta-panel-body{
+			padding: 0!important;
+		}
+
+		.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a{
+			background: $blue;
+			color: $white;
+		}
+		.vc_tta.vc_tta-shape-rounded .vc_tta-panel-body, .vc_tta.vc_tta-shape-rounded .vc_tta-panel-heading, .vc_tta.vc_tta-shape-rounded .vc_tta-tab>a{
+			border-radius: 0;
+		}
+		.vc_tta.vc_tta-spacing-1 .vc_tta-tab{
+			margin: 0 20px 20px 0;
+		}
+		.vc_toggle{
+			margin: 0;
+		}
+		.vc_toggle_title{
+			padding: 20px 75px 20px 25px;
+			background: $gray-faq;
+			font-size: 1em;
+			position: relative;
+			i{
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		.vc_toggle_size_md.vc_toggle_default .vc_toggle_content{
+			padding: 4% 6%;
+			margin: 0;
+			p{
+				margin: 0;
+			}
+		}
+	}
 }

@@ -1587,12 +1587,16 @@ ul.products.list a.btn-blue {
 @media (min-width: 768px) {
   .archive.category #page .widget-area, .archive.author #page .widget-area {
     float: right;
-    margin-left: 4.347826087%;
-    margin-right: 0;
+    margin-left: 0;
+    margin-right: 4.347826087%;
   }
   .archive.category #page .content-area, .archive.author #page .content-area {
-    float: left;
+    float: right;
   }
+}
+
+.archive.category #page .tags-links, .archive.author #page .tags-links {
+  display: none;
 }
 
 .archive.category #page .widget-title, .archive.author #page .widget-title {

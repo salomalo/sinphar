@@ -1391,12 +1391,16 @@ ul.products{
 		@media (min-width: 768px) {
 			.widget-area{
 				float: right;
-				margin-left: 4.347826087%;
-				margin-right: 0;
+				margin-left: 0;
+				margin-right: 4.347826087%;
 			}
 			.content-area{
-				float: left;
+				float: right;
 			}
+		}
+
+		.tags-links{
+			display: none;
 		}
 
 		.widget-title{

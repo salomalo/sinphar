@@ -148,9 +148,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<h2>還沒有加入杏輝之友嗎？</h2>
 
 	<div class="register-content">
-		<p>加入杏輝，有三大好處：</p>
-		<p>加入杏輝，有三大好處：</p>
-		<p>加入杏輝，有三大好處：</p>
+		<p>好處一：不定期會員獨享好康</p>
+		<p>好處二：隨時掌握最新的資訊</p>
 		<a class="btn-blue" href="<?php echo get_site_url().'/signup';?>"> 立即註冊 </a>
 	</div>
 </div>

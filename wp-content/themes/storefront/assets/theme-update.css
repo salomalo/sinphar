@@ -993,7 +993,7 @@ body.single p .woocommerce-Price-amount {
 
 @media (min-width: 768px) {
   .site-main .woocommerce-product-search {
-    margin: 4px 0 0 0;
+    margin: 4px 0 10px 0;
     float: left;
   }
 }

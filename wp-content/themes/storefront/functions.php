@@ -85,8 +85,8 @@ function fb_filter_query( $query, $error = true ){
 
   }
 }
-add_action( 'parse_query', 'fb_filter_query' );
-add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
+// add_action( 'parse_query', 'fb_filter_query' );
+// add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
 
 
 //  停止 WordPress 猜測網址功能

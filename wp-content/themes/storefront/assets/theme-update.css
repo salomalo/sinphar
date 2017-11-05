@@ -239,12 +239,27 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 
 .site-header-cart li.btn-cart-box {
   padding-right: 12px;
-  position: relative;
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  .site-header-cart li.btn-cart-box {
+    position: fixed;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header-cart li.btn-fb {
+    position: relative;
+    right: 45px;
+    top: 15px;
+  }
 }
 
 @media (max-width: 767px) {
   .site-header-cart li.btn-fb {
     position: relative;
+    right: 45px;
     top: 5px;
   }
 }
@@ -939,6 +954,12 @@ body:not(.home) header > .col-full {
   padding: 2% 0 0 0;
 }
 
+@media (max-width: 767px) {
+  body:not(.home):not(.page-template) header > .col-full {
+    padding: 2% 0 0 0;
+  }
+}
+
 body:not(.page-template-template-fullwidth) .col-full {
   padding: 4% 0;
 }
@@ -1066,6 +1087,10 @@ body.single p .woocommerce-Price-amount {
   .post-type-archive-product.error404.left-sidebar .content-area {
     width: 73.9130434783%;
   }
+}
+
+.pp_pic_holder.pp_woocommerce .ppt {
+  display: none !important;
 }
 
 body.woocommerce-page main.site-main {

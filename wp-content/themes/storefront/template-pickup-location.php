@@ -131,6 +131,28 @@ get_header(); ?>
 	new TwCitySelector({
 		el: ".tw-selector" // 同 DOM querySelector()
 	});
+
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+	};
+
+	var country = getUrlParameter('country');
+	var district = getUrlParameter('district');
+
+	jQuery("select.country option").filter(function() {
+    return jQuery(this).text() == country; 
+	}).prop('selected', true);
+
 </script>
 <?php if (empty($isMobile)): ?>
 <script type="text/javascript">

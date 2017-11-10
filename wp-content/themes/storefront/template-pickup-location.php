@@ -12,7 +12,7 @@ get_header(); ?>
 <?php 
 	$limit = 20;
 	$offset = empty($_GET['pages']) ? 0 : ((int)$_GET['pages'] - 1) * $limit;
-	$conditions = 'pl.city = "' . $_GET['country'] . '"';
+	$conditions = 'pl.city = "' . $_GET['county'] . '"';
 	$conditions .= empty($_GET['district']) ? '' : ' AND pl.address_1 LIKE "%' . $_GET['district'] . '%"';
 	$queryString = 'SELECT pl.*, pm.meta_value AS `phone`, pt.post_content AS `description`
 		FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl 
@@ -42,7 +42,17 @@ get_header(); ?>
 
 			 ?>
 			<form method="GET">
-				<div class="tw-selector"></div>
+				<?php
+					$county = $_GET['county'];
+					$district = $_GET['district'];
+				?>
+				<div
+					role="tw-city-selector"
+					class="tw-selector"
+					data-selected-county="<?php echo $county; ?>"
+					data-selected-district="<?php echo $district; ?>"
+				>
+				</div>
 			<?php if (empty($locations)): ?>
 				<input type="hidden" name="pages" value="1">
 			<?php endif ?>
@@ -128,30 +138,7 @@ get_header(); ?>
 	});
 
 	// reference: https://github.com/dennykuo/tw-city-selector
-	new TwCitySelector({
-		el: ".tw-selector" // 同 DOM querySelector()
-	});
-
-	var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-	};
-
-	var country = getUrlParameter('country');
-	var district = getUrlParameter('district');
-
-	jQuery("select.country option").filter(function() {
-    return jQuery(this).text() == country; 
-	}).prop('selected', true);
+	new TwCitySelector();
 
 </script>
 <?php if (empty($isMobile)): ?>

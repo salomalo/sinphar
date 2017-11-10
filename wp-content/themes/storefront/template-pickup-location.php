@@ -127,7 +127,7 @@ get_header(); ?>
 <script type="text/javascript">
 	// reference: http://botmonster.com/jquery-bootpag/#.WZBUu3cjF-U
 	jQuery(document).ready(function($) {
-		var total = $('#page-selection').data('total') / 20 + 1,
+		var total = $('#page-selection').data('total') / 21 + 1,
 			href = $('#page-selection').data('href') + "{{number}}";
 		$('#page-selection').bootpag({
 			total: total,

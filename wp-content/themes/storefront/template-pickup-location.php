@@ -13,7 +13,7 @@ get_header(); ?>
 	$limit = 20;
 	$offset = empty($_GET['pages']) ? 0 : ((int)$_GET['pages'] - 1) * $limit;
 	$conditions = 'pl.city = "' . $_GET['county'] . '"';
-	$conditions .= empty($_GET['district']) ? '' : ' AND pl.address_1 LIKE "%' . $_GET['district'] . '%"';
+	$conditions .= empty($_GET['district']) ? '' : ' AND pl.address_1 LIKE "' . $_GET['county'] . $_GET['district'] . '%"';
 	$queryString = 'SELECT pl.*, pm.meta_value AS `phone`, pt.post_content AS `description`
 		FROM `' . $wpdb->base_prefix . 'woocommerce_pickup_locations_geodata` pl 
 		INNER JOIN `' . $wpdb->base_prefix . 'postmeta` pm ON pm.post_id = pl.post_id AND pm.meta_key = "_pickup_location_phone" 

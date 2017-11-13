@@ -69,7 +69,7 @@ if ( ! $post->post_excerpt ) {
 		查詢杏輝專櫃門市
 	</a>
 <?php }else{ ?>
-	<a class="btn-blue">
+	<a class="btn-blue" href="<?php echo $link; ?>">
 		閱讀更多
 	</a>
 <?php } ?>

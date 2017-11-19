@@ -35,5 +35,27 @@
 
 <?php wp_footer(); ?>
 
+<?php if( is_page( array( 'signup') )){ ?>
+	<!-- if page is signup -->
+	<script src="<?php echo get_template_directory_uri() . '/assets/js/tw-city-selector.min.js'; ?>"></script>
+	<script type="text/javascript">
+		// reference: https://github.com/dennykuo/tw-city-selector
+		new TwCitySelector({
+			el: ".tw-city-selector" // 同 DOM querySelector()
+	  });
+
+	  jQuery('.address-main-selector').parent().prepend( jQuery('.normal-select') );
+
+	  jQuery('.normal-select select').prop('required',true);
+
+	  jQuery('select').on('change', function (e) {
+		    var countySelected = jQuery('select.county').find(":selected").val();
+		    var districtSelected = jQuery('select.district').find(":selected").val();
+
+				jQuery('input.address-main-selector').val( countySelected + districtSelected );
+		});
+	</script>
+<?php } ?>
+
 </body>
 </html>

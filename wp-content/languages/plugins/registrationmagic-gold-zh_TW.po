@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RegistrationMagic\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-30 21:59+0800\n"
-"PO-Revision-Date: 2017-09-28 20:10+0800\n"
+"PO-Revision-Date: 2017-11-19 15:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:879
 msgid "The reCAPTCHA response provided was incorrect.  Please re-try."
-msgstr ""
+msgstr "驗證碼錯誤，請再再試一遍，感謝。"
 
 #: includes/class_rm_ui_strings.php:882
 msgid "Select a List"
@@ -1310,7 +1310,7 @@ msgstr ""
 msgid ""
 "This email is already associated with a user account. Please login to fill "
 "this form.."
-msgstr ""
+msgstr "此帳號已經註冊過囉，請到登入頁面登入。"
 
 #: includes/class_rm_ui_strings.php:993
 msgid ""
@@ -4105,7 +4105,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:2968
 msgid "This field is required."
-msgstr ""
+msgstr "此欄位是必填"
 
 #: includes/class_rm_ui_strings.php:2971
 msgid "Please enter a valid URL."
@@ -4807,7 +4807,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:3487
 msgid "Following error(s) were found:"
-msgstr ""
+msgstr "請再確認以下欄位"
 
 #: includes/class_rm_ui_strings.php:3490
 msgid "Text for your note."

@@ -923,6 +923,15 @@ body.single p .woocommerce-Price-amount{
 	}
 }
 
+body.error404{
+	.widget_search form:before, .widget_product_search form:before{
+		display: none;
+	}
+	.site-main .woocommerce-product-search{
+		float: none;
+	}
+}
+
 // product detail
 .pp_pic_holder.pp_woocommerce{
 	.ppt{
@@ -2301,6 +2310,10 @@ fieldset{
 	}
 }
 
+.address-main-selector{
+	display: none;
+}
+
 // 門市
 h3.subtitle{
 	color: $blue;
@@ -2310,7 +2323,9 @@ h3.subtitle{
 		margin-top: 5%;
 	}
 }
-.store-locator-container{
+.store-locator-container,
+.normal-select,
+.rmagic .rmrow .rminput .normal-select{
 	@media (max-width: 767px) {
 		h3{
 			text-align: center;
@@ -2333,6 +2348,7 @@ h3.subtitle{
 	  font-size: 16px;
 	  height: 33px;
 	  background: url('./images/icon-arrow-bottom.svg') no-repeat 94% center;
+	  min-width: 0;
 
 		&::-ms-expand { 
     	display: none;

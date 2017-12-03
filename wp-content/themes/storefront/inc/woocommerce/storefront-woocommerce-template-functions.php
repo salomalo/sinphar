@@ -120,7 +120,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 			</li>
 			<li class="btn-fb">
-				<a href="https://www.facebook.com/sinphar.store/?fref=ts" target="_blank">
+				<a href="https://www.facebook.com/sinphar.store/?fref=ts" target="_blank" onClick="ga('send','event','fans','Click');">
 					<img width="25" src="<?php echo plugins_url().'/ultimate-social-media-icons/images/icons_theme/default/default_facebook.png' ?>" alt="">
 				</a>
 			</li>
@@ -353,7 +353,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_cart_link' ) ) {
 	 */
 	function storefront_handheld_footer_bar_cart_link() {
 		?>
-			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>" onClick="ga('send','event','pchome_store','Click);">
 				<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?></span>
 			</a>
 		<?php

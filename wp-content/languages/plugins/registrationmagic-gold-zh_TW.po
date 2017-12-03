@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RegistrationMagic\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-30 21:59+0800\n"
-"PO-Revision-Date: 2017-11-19 15:25+0800\n"
+"PO-Revision-Date: 2017-12-03 11:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -4113,7 +4113,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:2974
 msgid "Invalid Format."
-msgstr ""
+msgstr "錯誤的格式。"
 
 #: includes/class_rm_ui_strings.php:2977
 msgid "Please enter a valid number."
@@ -4581,7 +4581,7 @@ msgstr ""
 
 #: includes/class_rm_ui_strings.php:3334
 msgid "Please enter at least {0} characters."
-msgstr ""
+msgstr "請至少填入 {0} 字母。"
 
 #: includes/class_rm_ui_strings.php:3337
 msgid "Please enter a value less than or equal to {0}."

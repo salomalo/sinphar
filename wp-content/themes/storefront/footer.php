@@ -54,6 +54,18 @@
 
 				jQuery('input.address-main-selector').val( countySelected + districtSelected );
 		});
+
+		// 註冊頁面送出GA
+    jQuery('#rm_next_form_page_button_4_1').click(function() {
+        ga('send', 'event', 'signup', 'button');
+    });
+
+    // username 加上補充文字
+		jQuery('.rmagic-form input[name="username"]').closest('.rminput').append('<span>請以英文或數字為主，如sinphar6</span>');
+		jQuery('.rmagic-form input[name="username"]').attr('pattern', '[A-Za-z0-9\w]{4,20}');
+
+    // phone 加上補充文字
+		jQuery('.rmagic-form input[name="Phone_33"]').closest('.rminput').append('<span>請留手機或市話，市話請加區碼如：0227603688</span>');
 	</script>
 <?php } ?>
 

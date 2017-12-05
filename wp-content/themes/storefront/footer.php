@@ -57,7 +57,7 @@
 
 		// 註冊頁面送出GA
     jQuery('#rm_next_form_page_button_4_1').click(function() {
-        ga('send', 'event', 'signup', 'button');
+        ga('send','event','signup','button','signupfinish');
     });
 
     // username 加上補充文字

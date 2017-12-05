@@ -72,7 +72,7 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	function storefront_cart_link() {
 		?>
 			<!-- change cart url -->
-			<a class="cart-contents" href="http://www.pcstore.com.tw/sinphar" target="_blank" title="連結購物">
+			<a class="cart-contents" href="http://www.pcstore.com.tw/sinphar" onClick="ga('send','event','pchome_store','Click','gotopchome');" target="_blank" title="連結購物">
 			</a>
 		<?php
 	}
@@ -120,7 +120,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 			</li>
 			<li class="btn-fb">
-				<a href="https://www.facebook.com/sinphar.store/?fref=ts" target="_blank" onClick="ga('send','event','fans','Click');">
+				<a href="https://www.facebook.com/sinphar.store/?fref=ts" target="_blank" onClick="ga('send','event','fans','Click','gotofacebook');">
 					<img width="25" src="<?php echo plugins_url().'/ultimate-social-media-icons/images/icons_theme/default/default_facebook.png' ?>" alt="">
 				</a>
 			</li>
@@ -353,7 +353,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_cart_link' ) ) {
 	 */
 	function storefront_handheld_footer_bar_cart_link() {
 		?>
-			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>" onClick="ga('send','event','pchome_store','Click);">
+			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
 				<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?></span>
 			</a>
 		<?php
